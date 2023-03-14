@@ -5,7 +5,6 @@ body {
     background-image: url(../img/texture2.png);
     line-height: 1.6;
     letter-spacing: 3%;
-
 }
 
 
@@ -42,8 +41,8 @@ h1 {
 
 /* -------------LOGO & NAV BAR---------------------------------- */
 header {
+    width: 100%;
     display: flex;
-    width: 100vw;
     padding: 25px 70px;
     justify-content: space-between;
     box-sizing: border-box;
@@ -83,7 +82,8 @@ header a:hover {
 
 /* -----------------頁首------------------------------------ */
 
-.top {
+.top{
+    width: 100%;
     padding: 200px 50px 120px;
     display: flex;
     justify-content: space-between;
