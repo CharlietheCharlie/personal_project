@@ -22,10 +22,10 @@ h1 {
 /* Main Color: E3C3AB */
 /* reservation icon */
 .reserve {
-    width: 10vw;
+    width: 12vw;
     position: fixed;
-    bottom: 100px;
-    right: 80px;
+    bottom: 5vw;
+    right: 4vw;
     z-index: 100;
     transition: .2s;
 
@@ -148,6 +148,11 @@ header a:hover {
     position: relative;
     overflow: hidden;
 
+}
+.banner-text a{
+    color: white;
+    margin-top: 10px;
+    display: block;
 }
 
 .banner-text {
@@ -496,6 +501,24 @@ header a:hover {
 .located h2 {
     font-size: 24px;
     font-weight: 700;
+}
+.located .located-sel{
+    margin-top: 50px;
+    font-size: 0;
+}
+.located .located-sel a{
+    text-decoration: none;
+    font-size: 16px;
+    color: black;
+    padding: 10px 15px;
+    margin: 0 10px;
+    font-weight: 500;
+    border: 2px solid black;
+    border-radius: 50%;
+}
+.located .located-sel a:hover{
+    background-color: black;
+    color: white;
 }
 
 .located ul{
