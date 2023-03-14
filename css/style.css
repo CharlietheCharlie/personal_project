@@ -501,6 +501,7 @@ header a:hover {
 .located ul{
     margin-top: 60px;
     margin-bottom: 120px;
+    overflow:hidden;
 }
 
 .located li{
@@ -534,7 +535,7 @@ header a:hover {
 }
 
 .located .store2{
-    transform: translateX(300px)
+    transform: translateX(400px)
 }
 
 .located .store3{
