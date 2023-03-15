@@ -88,6 +88,7 @@ header a:hover {
     display: flex;
     justify-content: space-between;
     position: relative;
+    box-sizing: border-box;
 }
 
 .top h1 {
@@ -353,6 +354,7 @@ header a:hover {
 /* -------------------footer--------------------------------- */
 
 .foot {
+    
     height: 205px;
     background-color: #000000;
     display: flex;
