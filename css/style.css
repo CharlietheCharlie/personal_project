@@ -234,13 +234,14 @@ header a:hover {
     background-image: url("../img/texture1.webp");
     padding: 270px 0 370px;
     position: relative;
-
+    
 }
 
 .intro .deco1 {
     position: absolute;
     width: 30%;
     top: -100px;
+   
 }
 
 .intro .deco2 {
@@ -657,27 +658,58 @@ header a:hover {
     border: 1px solid black;
     font-weight: 500;
 }
+.product-sel a:hover{
+    color: white;
+    background-color: black;
+}
 
 .product-content{
     display: flex;
     width: 900px;
     margin: 0 auto;
     text-align: left;
+    justify-content: center;
 }
 
 .product-content > img{
     margin-right: 70px;
+    width: 280px;
+    height: 280px;
+}
+.product-list{
+    width: 540px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.product-detail{
+    width:45%;
+    margin-bottom: 30px;
 }
 
 .product-detail > p{
     font-weight: 500;
-    margin-bottom: 10px;
-}
-
-.product-size{
-    display: flex;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #A4A4A4;
 }
 
 .product-size{
     
+    padding-top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* -------------品牌故事CSS-------------------- */
+
+.story{
+    margin: 0 auto;
+    text-align: center;
+    padding: 320px 0 200px ;
+}
+
+.story h2 {
+    font-size: 24px;
+    font-weight: 700;
 }
