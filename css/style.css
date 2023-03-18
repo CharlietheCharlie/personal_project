@@ -19,7 +19,12 @@ h1 {
 }
 
 /* Main Color: E3C3AB */
-/* reservation icon */
+
+section > h2{
+    font-size: 24px;
+    font-weight: 700;
+}
+/*------- reservation icon----------------- */
 .reserve {
     width: 12vw;
     position: fixed;
@@ -467,11 +472,6 @@ header a:hover {
 
 }
 
-.news h2 {
-    font-size: 24px;
-    font-weight: 700;
-}
-
 .news ul {
     margin-top: 60px;
     margin-bottom: 120px;
@@ -554,10 +554,7 @@ header a:hover {
 
 }
 
-.located h2 {
-    font-size: 24px;
-    font-weight: 700;
-}
+
 
 .located .located-sel {
     margin-top: 50px;
@@ -657,10 +654,7 @@ header a:hover {
     
 }
 
-.product h2 {
-    font-size: 24px;
-    font-weight: 700;
-}
+
 .product-sel{
     margin: 50px auto;
     display: flex;
@@ -726,10 +720,7 @@ header a:hover {
     padding: 320px 0 200px ;
 }
 
-.story h2 {
-    font-size: 24px;
-    font-weight: 700;
-}
+
 .story-intro{
     width: 1200px;
     height: 1100px;
@@ -873,4 +864,77 @@ header a:hover {
 .time>h1:hover + .time-content{
     display: flex;
     color: black;
+}
+
+/* ---------------線上訂位CSS--------------------------- */
+
+.reservation{
+    margin: 0 auto;
+    text-align: center;
+    padding: 320px 0 200px ;
+}
+
+.reservation-content{
+    width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+.reservation-progress{
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    counter-reset: step;
+}
+.reservation-progress li {
+    margin: 0 55px;
+    position:relative;
+    width: 80px;
+  }
+
+.reservation-progress li:before{
+    content: counter(step);
+    counter-increment: step;
+    width: 50px;
+    height: 50px;
+    border: 2px solid black;
+    line-height: 50px;
+    display: block;
+    text-align: center;
+    border-radius: 50%;
+    font-family: 'Orelega One';
+    font-size: 30px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -60px;
+}
+
+.reservation-progress li:after{
+    content:"";
+    position:absolute;
+    width: 140px;
+    height:2px;
+    background-color: black;
+    top:-35px;
+    left:65px;
+    
+}
+
+.reservation-progress li:last-child:after{
+    content: none;
+}
+
+.reservation-progress li.active:before{
+    background-color: black;
+    color: white;
+}
+
+/* ---------------未完成專區----------------------- */
+
+.uncomplete{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 500;
+    color: #525252;
+    margin-top: 200px;
 }
