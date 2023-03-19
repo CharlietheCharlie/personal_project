@@ -6,7 +6,9 @@ body {
     line-height: 1.6;
     letter-spacing: 3%;
 }
-
+html {
+    scroll-behavior: smooth;
+  }
 
 
 h1 {
@@ -668,6 +670,25 @@ header a:hover {
 .located li .store-intro p {
     padding: 8px 0;
 }
+.located li .store-intro a{
+    transition: 1s;
+}
+.located li .store-intro a>iframe {
+    display: none;
+    width: 430px;
+    height: 250px;
+
+    
+}
+.located li .store-intro a>img {
+    padding-right: 400px;
+}
+
+
+.located li .store-intro a:hover > iframe{
+    display: block;
+}
+
 
 .located .store1 {
     transform: translateX(-50px)
@@ -693,7 +714,7 @@ header a:hover {
 .located .store5:after{
     content: "3/31即將正式營運";
     width:408px;
-    height: 100%;
+    height: 408px;
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
     position: absolute;
