@@ -641,7 +641,8 @@ header a:hover {
     display: flex;
     width: 1200px;
     margin: 0 auto 150px;
-
+    height: 408px;
+    position: relative;
 }
 .located li h2{
     font-weight: 700;
@@ -672,16 +673,17 @@ header a:hover {
 }
 .located li .store-intro a{
     transition: 1s;
+    
 }
 .located li .store-intro a>iframe {
     display: none;
     width: 430px;
     height: 250px;
 
-    
 }
 .located li .store-intro a>img {
     padding-right: 400px;
+    
 }
 
 
@@ -691,25 +693,29 @@ header a:hover {
 
 
 .located .store1 {
-    transform: translateX(-50px)
+    transform: translateX(-50px);
+    z-index: 5;
 }
 
 .located .store2 {
-    transform: translateX(400px)
+    transform: translateX(400px);
+    z-index: 4;
 }
 
 .located .store3 {
-    transform: translateX(100px)
+    transform: translateX(100px);
+    z-index: 3;
 }
 
 .located .store4 {
-    transform: translateX(300px)
+    transform: translateX(300px);
+    z-index: 2;
 }
 
 .located .store5 {
     transform: translateX(50px);
     position: relative;
-    
+    z-index: 1;
 }
 .located .store5:after{
     content: "3/31即將正式營運";
