@@ -31,13 +31,14 @@
     <section class="product">
         <h2>查看菜單</h2>
         <h2>product</h2>
-        <ul class="product-sel">
-            <li><a href="#">咖啡</a></li>
-            <li><a href="#">飲品</a></li>
-            <li><a href="#">甜點</a></li>
-            <li><a href="#">輕食</a></li>
-        </ul>
-        <div class="product-content">
+        <div class="product-sel">
+            <label><input type="radio" name="product" value="咖啡" checked><span class="round button">咖啡</span></label>
+            <label><input type="radio" name="product" value="飲品"><span class="round button">飲品</span></label>
+            <label><input type="radio" name="product" value="甜點"><span class="round button">甜點</span></label>
+            <label><input type="radio" name="product" value="輕食"><span class="round button">輕食</span></label>
+        </div>
+        <!-------------咖啡菜單----------------------->
+        <div class="product-content coffee-content">
             <img src="img/product-coffee.png" alt="">
             <div class="product-list">
                 <div class="product-detail">
@@ -52,13 +53,13 @@
                     <div class="product-size">
                         <img src="img/product-M.svg" alt="">
                         <p>$55</p>
-                        
+
                     </div>
                     <div class="product-size">
                         <img src="img/product-L.svg" alt="">
                         <p>$65</p>
                     </div>
-                    
+
                 </div>
                 <div class="product-detail">
                     <p>拿鐵 Latte</p>
@@ -117,7 +118,203 @@
                 </div>
             </div>
         </div>
+        <!-- -----------------飲品菜單---------------------- -->
+        <div class="product-content drink-content">
+            <img src="img/product-drink.jpg" alt="">
+            <div class="product-list">
+                <div class="product-detail">
+                    <p>草莓奶昔 Strawberry smoothie</p>
+                    <div class="product-size">
+                        <img src="img/product-Limit.svg" alt="">
+                        <p>$110</p>
+                    </div>
+                </div>
+                <div class="product-detail">
+                    <p>草莓冰茶 Strawberry iced tea</p>
+                    <div class="product-size">
+                        <img src="img/product-Limit.svg" alt="">
+                        <p>$85</p>
 
+                    </div>
+                    
+
+                </div>
+                <div class="product-detail">
+                    <p>錫蘭紅茶 Ceylon black tea</p>
+                    <div class="product-size">
+                        <img src="img/product-M.svg" alt="">
+                        <p>$50</p>
+                    </div>
+                    <div class="product-size">
+                        <img src="img/product-L.svg" alt="">
+                        <p>$60</p>
+                    </div>
+                </div>
+                <div class="product-detail">
+                    <p>伯爵紅茶 Earl gray tea</p>
+                    <div class="product-size">
+                        <img src="img/product-M.svg" alt="">
+                        <p>$50</p>
+                    </div>
+                    <div class="product-size">
+                        <img src="img/product-L.svg" alt="">
+                        <p>$60</p>
+                    </div>
+                </div>
+                <div class="product-detail">
+                    <p>高山烏龍 High mountain oolong</p>
+                    <div class="product-size">
+                        <img src="img/product-M.svg" alt="">
+                        <p>$55</p>
+                    </div>
+                    <div class="product-size">
+                        <img src="img/product-L.svg" alt="">
+                        <p>$65</p>
+                    </div>
+                </div>
+                <div class="product-detail">
+                    <p>茉莉綠茶 Jasmine green tea</p>
+                    <div class="product-size">
+                        <img src="img/product-M.svg" alt="">
+                        <p>$50</p>
+                    </div>
+                    <div class="product-size">
+                        <img src="img/product-L.svg" alt="">
+                        <p>$60</p>
+                    </div>
+                </div>
+                <div class="product-detail">
+                    <p>香蕉果昔 Banana Smoothie</p>
+                    <div class="product-size">
+                        <!-- <img src="img/product-M.svg" alt=""> -->
+                        <p>$95</p>
+                    </div>
+                </div>
+                <div class="product-detail">
+                    <p>莓果果昔 Mixed berry Smoothie</p>
+                    <div class="product-size">
+                        <!-- <img src="img/product-M.svg" alt=""> -->
+                        <p>$100</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- -------------甜點菜單------------------ -->
+        <div class="product-content dessert-content">
+            <img src="img/product-dessert.png" alt="">
+            <div class="product-list">
+                <div class="product-detail">
+                    <p>雙層草莓蛋糕 Double strawberry</p>
+                    <div class="product-size">
+                        <img src="img/product-Limit.svg" alt="">
+                        <p>$85</p>
+                    </div>
+                </div>
+                <div class="product-detail">
+                    <p>草莓馬卡龍 Strawberry macaron</p>
+                    <div class="product-size">
+                        <img src="img/product-Limit.svg" alt="">
+                        <p>$90</p>
+
+                    </div>
+                    
+
+                </div>
+                <div class="product-detail">
+                    <p>三重巧克力蛋糕 Triple chocolate</p>
+                    <div class="product-size">
+                        <!-- <img src="img/product-M.svg" alt=""> -->
+                        <p>$75</p>
+                    </div>
+                </div>
+                <div class="product-detail">
+                    <p>可麗露 Canele</p>
+                    <div class="product-size">
+                        <!-- <img src="img/product-M.svg" alt=""> -->
+                        <p>$60</p>
+                    </div>
+                    
+                </div>
+                <div class="product-detail">
+                    <p>藍莓派 Blueberry pie</p>
+                    <div class="product-size">
+                        <!-- <img src="img/product-M.svg" alt=""> -->
+                        <p>$85</p>
+                    </div>
+    
+                </div>
+                <div class="product-detail">
+                    <p>肉桂捲 Cinnamon roll</p>
+                    <div class="product-size">
+                        <!-- <img src="img/product-M.svg" alt=""> -->
+                        <p>$90</p>
+                    </div>
+                
+                </div>
+                <div class="product-detail">
+                    <p>提拉米蘇 Tiramisu</p>
+                    <div class="product-size">
+                        <!-- <img src="img/product-M.svg" alt=""> -->
+                        <p>$85</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+                <!-- -------------輕食菜單------------------ -->
+                <div class="product-content light-content">
+                    <img src="img/product-light.jpg" alt="">
+                    <div class="product-list">
+                        <div class="product-detail">
+                            <p>草莓奶霜吐司 Cream strawberry bread</p>
+                            <div class="product-size">
+                                <img src="img/product-Limit.svg" alt="">
+                                <p>$85</p>
+                            </div>
+                        </div>
+                        <div class="product-detail">
+                            <p>雙雞酪梨三明治 Double chicken avocado sandwich</p>
+                            <div class="product-size">
+                                <!-- <img src="img/product-Limit.svg" alt=""> -->
+                                <p>$105</p>
+        
+                            </div>
+                            
+        
+                        </div>
+                        <div class="product-detail">
+                            <p>經典牛肉起司三明治 Classic beef sandwich</p>
+                            <div class="product-size">
+                                <!-- <img src="img/product-M.svg" alt=""> -->
+                                <p>$110</p>
+                            </div>
+                        </div>
+                        <div class="product-detail">
+                            <p>煙燻豬里肌帕尼尼 Smoked pork panino</p>
+                            <div class="product-size">
+                                <!-- <img src="img/product-M.svg" alt=""> -->
+                                <p>$105</p>
+                            </div>
+                            
+                        </div>
+                        <div class="product-detail">
+                            <p>菠菜鮭魚法式鹹派 Salmon & Spinach Quiche</p>
+                            <div class="product-size">
+                                <!-- <img src="img/product-M.svg" alt=""> -->
+                                <p>$120</p>
+                            </div>
+            
+                        </div>
+                        <div class="product-detail">
+                            <p>馬鈴薯沙拉捲餅 Potato salad burrito</p>
+                            <div class="product-size">
+                                <!-- <img src="img/product-M.svg" alt=""> -->
+                                <p>$90</p>
+                            </div>
+                        
+                        </div>
+                        
+                    </div>
+                </div>
     </section>
 
     <!-- footer -->

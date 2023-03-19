@@ -755,7 +755,15 @@ header a:hover {
     width: 385px;
     justify-content: space-between;
 }
-.product-sel a{
+
+.product-sel input[type="radio"]{
+    display: none;
+}
+.product-sel input:checked+.button {
+    background:black;
+    color: #fff;
+}
+.product-sel .button {
     display: block;
     padding: 8px 20px;
     text-decoration: none;
@@ -763,10 +771,12 @@ header a:hover {
     border: 1px solid black;
     font-weight: 500;
     transition: 0.3s;
+    font-size: 16px;
+    cursor: pointer;
 }
-.product-sel a:hover{
-    color: white;
-    background-color: black;
+.product-sel :hover {
+    background: black;
+    color: #fff;
 }
 
 .product-content{
@@ -791,6 +801,7 @@ header a:hover {
 .product-detail{
     width:45%;
     margin-bottom: 30px;
+    height: 130px;
 }
 
 .product-detail > p{
@@ -807,13 +818,37 @@ header a:hover {
     gap: 10px;
 }
 
+.product-content{
+    display: none;
+}
+.product-sel:has(input[value="咖啡"]:checked) ~ .coffee-content{
+    display: flex;
+    animation: product-appear 1 1s;
+}
+.product-sel:has(input[value="飲品"]:checked) ~ .drink-content{
+    display: flex;
+    animation: product-appear 1 1s;
+}
+.product-sel:has(input[value="甜點"]:checked) ~ .dessert-content{
+    display: flex;
+    animation: product-appear 1 1s;
+}
+.product-sel:has(input[value="輕食"]:checked) ~ .light-content{
+    display: flex;
+    animation: product-appear 1 1s;
+}
+@keyframes product-appear{
+    0%{opacity:0}
+    100%{opacity:1}
+}
+
 /* -------------品牌故事CSS-------------------- */
 
 .story{
     margin: 0 auto;
     text-align: center;
     padding: 320px 0 200px ;
-    overflow-y: hidden;
+    overflow: hidden;
 }
 
 
