@@ -18,7 +18,7 @@ h1 {
     color: white;
 }
 
-/* Main Color: E3C3AB */
+/* Main Color: #E3C3AB */
 
 section > h2{
     font-size: 24px;
@@ -74,7 +74,8 @@ header {
 }
 
 header:hover {
-    background-color: #525252;
+    background-color: rgba(82, 82, 82,.9);
+    
 }
 
 header:hover a {
@@ -158,8 +159,6 @@ header a:hover {
     display: flex;
     align-items: center;
     overflow-y: hidden;
-    /* width: 100%;
-    height: 80%; */
     scroll-behavior: smooth;
 }
 
@@ -169,7 +168,6 @@ header a:hover {
 
 .scroll-item-outer {
     width: 100%;
-    /* height: 100%; */
     flex-shrink: 0;
     position: relative;
     transition: 1s;
@@ -332,7 +330,6 @@ header a:hover {
 
 .intro li p {
     font-weight: 500;
-    /* font-size: px; */
 }
 
 .intro li img {
