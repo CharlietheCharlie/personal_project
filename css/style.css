@@ -632,7 +632,6 @@ header a:hover {
 
 .located ul {
     margin-top: 60px;
-    margin-bottom: 120px;
     overflow: hidden;
 }
 
@@ -643,6 +642,9 @@ header a:hover {
     margin: 0 auto 150px;
     height: 408px;
     position: relative;
+}
+.located li:last-child{
+    margin-bottom: 300px;
 }
 .located li h2{
     font-weight: 700;
@@ -672,10 +674,7 @@ header a:hover {
 .located li .store-intro p {
     padding: 8px 0;
 }
-.located li .store-intro a{
-    transition: 1s;
-    
-}
+
 .located li .store-intro a>iframe {
     display: none;
     width: 580px;
@@ -683,7 +682,7 @@ header a:hover {
 
 }
 .located li .store-intro a>img {
-    padding-right: 400px;
+    padding-right: 560px;
     
 }
 
