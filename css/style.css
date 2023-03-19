@@ -665,7 +665,8 @@ header a:hover {
 .located li .store-intro {
     margin: 10px 45px 0;
     font-size: 20px;
-    width: 400px
+    width: 400px;
+    z-index: 1;
 }
 
 .located li .store-intro p {
@@ -677,8 +678,8 @@ header a:hover {
 }
 .located li .store-intro a>iframe {
     display: none;
-    width: 430px;
-    height: 250px;
+    width: 580px;
+    height: 388px;
 
 }
 .located li .store-intro a>img {
@@ -714,7 +715,6 @@ header a:hover {
 
 .located .store5 {
     transform: translateX(50px);
-    position: relative;
     z-index: 1;
 }
 .located .store5:after{
