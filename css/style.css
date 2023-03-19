@@ -148,7 +148,8 @@ header a:hover {
 }
 
 .top-right {
-    width: 77.125%;
+    width: 1400px;
+    margin-left: 20px;
 }
 
 /* ------------輪播------------------------------ */
@@ -239,6 +240,7 @@ header a:hover {
     background-image: url("../img/texture1.webp");
     padding: 270px 0 370px;
     position: relative;
+    
 }
 
 .intro .deco1 {
@@ -283,15 +285,16 @@ header a:hover {
     transform: translate(-50%);
     margin: 0 auto;
     color: white;
+    filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.5));
 
 }
 
 .intro ul {
     display: flex;
-    width: 1200px;
+    /* width: 1200px; */
     height: 520px;
     margin: 0 auto;
-    justify-content: space-between;
+    justify-content: center;
     position: absolute;
     bottom: 190px;
     left: 0;
@@ -299,8 +302,8 @@ header a:hover {
 }
 
 .intro li {
-    width: 30%;
-    
+    width: 350px;
+    margin: 0 20px;
     background-color: #fff;
     position: relative;
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
@@ -1004,7 +1007,7 @@ header a:hover {
 }
 
 .reservation-content{
-    width: 1200px;
+    /* width: 1200px; */
     margin: 0 auto;
     position: relative;
 }
