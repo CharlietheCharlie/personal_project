@@ -806,6 +806,7 @@ header a:hover {
     margin: 0 auto;
     text-align: center;
     padding: 320px 0 200px ;
+    overflow-y: hidden;
 }
 
 
@@ -814,6 +815,7 @@ header a:hover {
     height: 1100px;
     margin: 0 auto 100px;
     position: relative;
+
 }
 
 .story-intro > div{
