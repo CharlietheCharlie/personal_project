@@ -652,19 +652,26 @@ header a:hover {
 .located li h2{
     font-weight: 700;
 }
-.located .img-right>img {
+.located .img-right>.store-img {
     order: 1;
 }
-
-.located li>img {
+.located .store-img{
+    width: 408px;
+    height: 408px;
+    overflow: hidden;
+}
+.located .store-img>img{
     width: 408px;
     height: 408px;
     opacity: .8;
     filter:grayscale(.5);
+    transition: .5s;
+    
 }
-.located li>img:hover {
+.located .store-img>img:hover {
     opacity: 1;
     filter:grayscale(0);
+    transform: scale(1.2);
 }
 
 .located li .store-intro {
