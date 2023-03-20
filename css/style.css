@@ -905,6 +905,7 @@ header a:hover {
     top:180px;
     left:50%;
     transform: translateX(-50%);
+    color: #525252; 
     animation: story-midmvin 1 1s;
 }
 .story-intro .story-intro-3{
@@ -914,6 +915,7 @@ header a:hover {
     padding: 250px 180px 200px 200px;
     right:-100px;
     bottom: -200px;
+    
     animation: story-rightmvin 1 1.5s;
 }
 @keyframes story-leftmvin {
