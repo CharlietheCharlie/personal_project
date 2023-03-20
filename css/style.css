@@ -700,6 +700,7 @@ header a:hover {
 
 .located li .store-intro a:hover > iframe{
     display: block;
+    animation: product-appear 1 1s;
 }
 
 
