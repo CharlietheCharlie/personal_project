@@ -102,12 +102,12 @@ header a:hover {
 .top h1 {
     font-family: 'Orelega One', cursive;
     position: absolute;
-    font-size: 120px;
+    font-size: 13vh;
     line-height: 1;
     letter-spacing: 0.03em;
     color: #C29898;
     transform: matrix(1, 0, -0.32, 0.95, 0, 0);
-    width: 800px;
+    width: 40vw;
     left: 70px;
     top: 370px;
     z-index: 1;
