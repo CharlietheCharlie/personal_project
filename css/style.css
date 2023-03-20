@@ -94,7 +94,7 @@ header a:hover {
     width: 100%;
     padding: 200px 50px 120px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     position: relative;
     box-sizing: border-box;
 }
@@ -108,7 +108,7 @@ header a:hover {
     color: #C29898;
     transform: matrix(1, 0, -0.32, 0.95, 0, 0);
     width: 800px;
-    left: 100;
+    left: 70px;
     top: 370px;
     z-index: 1;
     margin-left: 30px;
@@ -147,8 +147,9 @@ header a:hover {
     color: #525252;
 }
 
+
 .top-right {
-    width: 1400px;
+    width: 1350px;
     margin-left: 20px;
 }
 
@@ -178,7 +179,7 @@ header a:hover {
 
 .scroll-item>img {
     width: 100%;
-    height:850px;
+    height:845px;
     border-radius: 20px 0 0 20px;
     display: block;
 }
@@ -687,8 +688,8 @@ header a:hover {
 
 .located li .store-intro a>iframe {
     display: none;
-    width: 580px;
-    height: 388px;
+    width: 500px;
+    height: 350px;
 
 }
 .located li .store-intro a>img {
@@ -817,6 +818,22 @@ header a:hover {
     align-items: center;
     gap: 10px;
 }
+.product-size span{
+    border: 1px solid black;
+    padding: 1.5px 10px;
+    width: 12px;
+    text-align: center;
+}
+.product-size span.spec{
+    border: 1px solid #AB423B;
+    padding: 1.5px 5px;
+    width: 21px;
+    text-align: center;
+    color: #AB423B;
+
+}
+
+
 
 .product-content{
     display: none;
