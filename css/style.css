@@ -690,7 +690,7 @@ header a:hover {
     display: none;
     width: 500px;
     height: 350px;
-
+    border-radius: 10px;
 }
 .located li .store-intro a>img {
     padding-right: 560px;
