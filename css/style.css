@@ -128,10 +128,12 @@ header a:hover {
 }
 
 .top-left {
-    margin-top: 620px;
+    padding-top: 70vh;
+    box-sizing: border-box;
     margin-bottom: 30px;
     text-align: center;
-    width: 21.875%;
+    width: 21.875vw;
+    height: 100vh;
 
 }
 
@@ -149,8 +151,10 @@ header a:hover {
 
 
 .top-right {
-    width: 1350px;
+    width: 78vw;
     margin-left: 20px;
+    position: relative;
+    
 }
 
 /* ------------輪播------------------------------ */
@@ -179,7 +183,7 @@ header a:hover {
 
 .scroll-item>img {
     width: 100%;
-    height:845px;
+    height:100vh;
     border-radius: 20px 0 0 20px;
     display: block;
 }
