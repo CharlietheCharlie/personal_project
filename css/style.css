@@ -63,7 +63,7 @@ header {
     left: 0;
     top: 0;
     z-index: 100;
-    /* transition: 0.5s; */
+    transition: 0.3s;
 }
 
 header > a img{
@@ -89,9 +89,6 @@ header:hover {
     
 }
 
-.hover{
-    background-color: blue;
-}
 
 header:hover a {
     color: white;
@@ -100,6 +97,19 @@ header:hover > a > img{
     filter: drop-shadow(5px 3px  rgba(255, 255, 255, 1));
     
 }
+
+header.nav-scroll{
+    background-color: rgba(82, 82, 82,.9);
+}
+
+header.nav-scroll a {
+    color: white;
+}
+header.nav-scroll > a > img{
+    filter: drop-shadow(5px 3px  rgba(255, 255, 255, 1));
+    
+}
+
 
 header a:hover {
     color: #E3C3AB;
