@@ -1262,12 +1262,26 @@ header a:hover {
     border-radius: 10px;
     font-family: 'Noto Sans TC', sans-serif;
 }
-.faq > .faq-bg > img{
-    transform: translateY(-300px);
-    width: 100%;
-    filter: blur(5px);
+.faq > .faq-bg{
+    display: flex;
     
 }
+.faq > .faq-bg > img{
+    transform: translateY(-300px);
+    width: 120%;
+    filter: blur(5px);
+    flex-shrink: 0;
+    animation-delay: 2s;
+    animation: leftslide linear infinite 50s ;
+}
+
+
+@keyframes leftslide {
+    0%{transform: translateX(0%);}
+    100%{transform: translateX(-100%);}
+}
+
+
 .qanda-columns{
     display: flex;
     justify-content: center;
