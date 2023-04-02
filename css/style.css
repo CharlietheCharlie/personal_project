@@ -500,7 +500,7 @@ header a:hover {
     height: 20%;
     position: absolute;
     color: white;
-    background-color: rgba(0, 0, 0, .9);
+    background-color: rgba(52, 52, 52, 0.95);
     border: 3px solid white;
     bottom: 8%;
     left: 50%;

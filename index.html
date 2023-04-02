@@ -210,7 +210,7 @@
                 $(".chat-res").css({ display: "block" });
 
 
-                let text = "歡迎光臨DuoChill Cafe! 如果您在今天" + time + "想要來點" + feel + ", 推薦您可以來杯\"" + drink + "\", 加上一份\"" + food + "\"" + lunch + ", 讓您能夠" + mood;
+                let text = "歡迎光臨DuoChill Cafe! 如果您在今天" + time + "想要來點" + feel + ", 推薦您可以來杯\"" + drink.split(" ",1) + "\", 加上一份\"" + food.split(" ",1) + "\"" + lunch + ", 讓您能夠" + mood;
                 
                 setTimeout(()=>{ for(let i = 0; i < text.length; i++){
                     setTimeout(()=>{ document.querySelector(".chat-res p").innerHTML += text.charAt(i)},50*i)
