@@ -1,3 +1,5 @@
+
+
 //----------- 導覽列往下隱藏 往上顯示&HOVER效果--------------------------
 let beforeScrollTop = document.documentElement.scrollTop;
 const navbarHide = () => {
@@ -23,6 +25,7 @@ const navbarHide = () => {
 
 
 window.addEventListener("scroll", navbarHide);
+
 
 // ----------------菜單點選類別切換-------------------------------
 

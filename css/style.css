@@ -397,6 +397,7 @@ header a:hover {
     background-size: cover;
     background-repeat: no-repeat;
     overflow: hidden;
+    position: relative;
 }
 
 .suginput {
@@ -493,6 +494,41 @@ header a:hover {
 .sug input[type="submit"]:hover {
     transform: scale(1.1);
 }
+
+.chat-res {
+    width: 60vw;
+    height: 20%;
+    position: absolute;
+    color: white;
+    background-color: rgba(0, 0, 0, .9);
+    border: 3px solid white;
+    bottom: 8%;
+    left: 50%;
+    border-radius: 5px;
+    padding: 10px 20px;
+    transform: translateX(-50%);
+    display: none;
+    text-align: left;
+
+}
+
+.chat-res p {
+    animation: 
+        caret 1.5s steps(1) infinite;
+    border-right: 3px solid;
+    border-right-color: white;
+    overflow: hidden;
+    width: 100%;
+    display: inline;
+}
+
+@keyframes caret {
+    50% {
+        border-right-color: transparent;
+    }
+}
+
+
 
 /* -------------------footer--------------------------------- */
 
@@ -818,7 +854,7 @@ header a:hover {
 }
 
 
-.product-sel button{
+.product-sel button {
     display: block;
     padding: 8px 20px;
     text-decoration: none;
@@ -837,7 +873,7 @@ header a:hover {
     color: #fff;
 }
 
-.product .product-sel .product-button-hover{
+.product .product-sel .product-button-hover {
     background: black;
     color: #fff;
 }
@@ -1128,7 +1164,7 @@ header a:hover {
 
 
 
-.reservation{
+.reservation {
 
     margin: 0 auto;
     position: relative;
@@ -1185,50 +1221,52 @@ header a:hover {
     color: white;
 }
 
-.calender{
+.calender {
     display: flex;
     flex-direction: column;
     width: 540px;
     margin: 100px auto 0;
 }
 
-.month{
+.month {
     display: flex;
     justify-content: center;
     margin-bottom: 40px;
-    gap:30px;
+    gap: 30px;
     font-size: 20px;
 }
-.month > div{
+
+.month>div {
     width: 20px;
 }
-.weekdays{
+
+.weekdays {
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
-    
+
 }
 
-.weekdays .weekday{
+.weekdays .weekday {
     flex-basis: 60px;
     height: 30px;
     margin: 0 6px;
     font-weight: 500;
-    
+
 }
 
-.days{
+.days {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    
+
 }
 
-.days .day{
+.days .day {
     flex-basis: 60px;
     height: 62px;
     margin: 8px 6px;
-    background-color:#F2F2F2;
+    background-color: #F2F2F2;
     border: none;
 }
 
@@ -1236,7 +1274,7 @@ header a:hover {
 
 /*--------------------FAQ------------------------- */
 
-.faq > .faq-bg{
+.faq>.faq-bg {
     position: absolute;
     left: 0;
     width: 100%;
@@ -1244,51 +1282,60 @@ header a:hover {
     z-index: -1;
     height: 800px;
     overflow: hidden;
+    display: flex;
+
 }
-.faq form{
+
+.faq form {
     width: 850px;
     margin: 0 auto;
 }
-.faq form p{
+
+.faq form p {
     margin-bottom: 10px;
 }
-.faq form textarea{
+
+.faq form textarea {
     box-sizing: border-box;
     width: 100%;
     height: 300px;
-    font-size: 20px;
+    letter-spacing: 0.03em;
     padding: 15px;
     border: 3px solid black;
     border-radius: 10px;
     font-family: 'Noto Sans TC', sans-serif;
 }
-.faq > .faq-bg{
-    display: flex;
-    
-}
-.faq > .faq-bg > img{
+
+.faq>.faq-bg>img {
     transform: translateY(-300px);
     width: 120%;
+    height: 80vh;
     filter: blur(5px);
     flex-shrink: 0;
-    animation-delay: 2s;
-    animation: leftslide linear infinite 50s ;
+    animation: leftslide linear infinite 70s;
+
 }
 
 
 @keyframes leftslide {
-    0%{transform: translateX(0%);}
-    100%{transform: translateX(-100%);}
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
 }
 
 
-.qanda-columns{
+.qanda-columns {
     display: flex;
     justify-content: center;
-    
+
     margin: 0 auto 350px;
 }
-.qanda{
+
+.qanda {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -1298,26 +1345,29 @@ header a:hover {
     align-items: center;
     justify-content: space-between;
     margin-top: 100px;
-    text-align:  left;
+    text-align: left;
     height: 220px;
 }
-.qanda-content{
+
+.qanda-content {
     width: 100%;
     max-width: 410px;
     margin-bottom: 30px;
     flex-grow: 0;
 }
-.qanda-content .question{
+
+.qanda-content .question {
     display: flex;
     justify-content: space-between;
     color: white;
-    background-color:black;
+    background-color: black;
     border-radius: 5px 5px 0 0;
     line-height: 50px;
     padding: 0 15px;
-    
+
 }
-.qanda-content .question button{
+
+.qanda-content .question button {
     background: none;
     border: none;
     transition: 1s;
@@ -1325,10 +1375,10 @@ header a:hover {
     align-items: center;
 }
 
-.qanda-content .answer{
+.qanda-content .answer {
     height: 150px;
     padding: 15px;
-    
+
     border-radius: 0 0 5px 5px;
     background-color: #E3C3AB;
     border-top: none;
@@ -1336,22 +1386,24 @@ header a:hover {
 
 }
 
-.qanda-close .question{
-    
-    background-color:rgba(0, 0, 0, );
+.qanda-close .question {
+
+    background-color: rgba(0, 0, 0, );
     border-radius: 5px;
-    transition:.2s;
+    transition: .2s;
 }
-.qanda-close .question:hover{
-    
-    background-color:rgba(255, 255, 255, 0.5);
+
+.qanda-close .question:hover {
+
+    background-color: rgba(255, 255, 255, 0.5);
     color: black
 }
-.qanda-close .answer{
+
+.qanda-close .answer {
     height: 0;
     overflow: hidden;
     padding: 0 10px;
-    
+
 }
 
 
