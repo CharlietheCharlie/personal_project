@@ -184,7 +184,7 @@
                 let time = $(".sug input[name = 'time']:checked").attr("value");
                 let lunch = "";
                 if (time === "中午") {
-                    lunch = ", 或許再來個\"" + dessert[parseInt(Math.random() * dessert.length)] + "\""
+                    lunch = ", 或許再來個\"" + dessert[parseInt(Math.random() * dessert.length)].split(" ",1) + "\""
                 }
                 let mood = "";
                 let drink = "";
