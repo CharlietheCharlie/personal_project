@@ -26,6 +26,18 @@ const navbarHide = () => {
 
 window.addEventListener("scroll", navbarHide);
 
+// --------------------導覽列 RWD---------------------------------
+
+    let ham = document.querySelector(".head .ham");
+    let li_decs = document.querySelectorAll(".nav li:not(:last-child)::after")
+    ham.addEventListener("click",(e)=>{
+        ham.previousElementSibling.classList.toggle("click");
+        ham.children[0].classList.toggle("click");
+        ham.children[1].classList.toggle("click");
+        ham.children[2].classList.toggle("click");
+
+})
+
 // ------------------------輪播-----------------------------------
 
 
