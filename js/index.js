@@ -31,12 +31,14 @@ window.addEventListener("scroll", navbarHide);
     let ham = document.querySelector(".head .ham");
     let li_decs = document.querySelectorAll(".nav li:not(:last-child)::after")
     ham.addEventListener("click",(e)=>{
+        e.preventDefault();
         ham.previousElementSibling.classList.toggle("click");
         ham.children[0].classList.toggle("click");
         ham.children[1].classList.toggle("click");
         ham.children[2].classList.toggle("click");
 
 })
+window.addEventListener("scroll",{})
 
 // ------------------------輪播-----------------------------------
 
