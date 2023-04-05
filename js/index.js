@@ -26,6 +26,39 @@ const navbarHide = () => {
 
 window.addEventListener("scroll", navbarHide);
 
+// ------------------------輪播-----------------------------------
+
+
+
+    
+    let slideImgsCount = $('.scroll-item img').length;
+    let currentIndex = 0;
+    
+    $('.scroll-item').eq(currentIndex).fadeIn();
+
+    setInterval(showNextSlide, 5000);
+    
+    function showNextSlide(){
+        let nextIndex = (currentIndex + 1) % slideImgsCount;
+        $('.scroll-item').eq(currentIndex).fadeOut();
+        $('.scroll-item').eq(nextIndex).fadeIn();
+        currentIndex = nextIndex;
+    }
+    
+   
+    slideButtons = document.querySelectorAll("#navigate a");
+    slideButtonArray = [];
+
+    slideButtons.forEach(button => {
+        slideButtonArray.push(button);
+        button.addEventListener("click", (e)=>{
+            e.preventDefault();
+            $('.scroll-item').fadeOut();
+            currentIndex = slideButtonArray.indexOf(button);
+            $('.scroll-item').eq(currentIndex).fadeIn();
+        })
+    })
+
 
 // ----------------菜單點選類別切換-------------------------------
 

@@ -39,43 +39,38 @@
         <div class="top-right">
 
             <div class="carousel">
-                <ul class="scroll">
-                    <li class="scroll-item-outer">
-                        <div id="slide-1" class="scroll-item">
-                            <img src="img/banner1.png" />
-                            <div class="banner-text">
-                                <p>DuoChill夥伴招募中，We are hiring!</p>
-                                <a href="news.html">點擊查看更多</a>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="scroll-item-outer">
-                        <div id="slide-2" class="scroll-item">
-                            <img src="img/banner2.png" />
-                            <div class="banner-text">
-                                <p>DuoChill前金允文店將於本月3/31盛大開幕，將推出全品項優惠活動。</p>
-                                <a href="news.html">點擊查看更多</a>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="scroll-item-outer">
-                        <div id="slide-3" class="scroll-item">
-                            <img src="img/banner3.png" alt="Picture 3" />
-                            <div class="banner-text">
-                                <p>DuoChill草莓季限定商品本周上市。</p>
-                                <a href="news.html  ">點擊查看更多</a>
-                            </div>
-                        </div>
-                    </li>
 
-                </ul>
-                <nav id="navigate">
-                    <a href="#slide-1"></a>
-                    <a href="#slide-2"></a>
-                    <a href="#slide-3"></a>
-                </nav>
+                <div id="slide-1" class="scroll-item">
+                    <img src="img/banner1.png" />
+                    <div class="banner-text">
+                        <p>DuoChill夥伴招募中，We are hiring!</p>
+                        <a href="news.html">點擊查看更多</a>
+                    </div>
+                </div>
+
+                <div id="slide-2" class="scroll-item">
+                    <img src="img/banner2.png" />
+                    <div class="banner-text">
+                        <p>DuoChill前金允文店將於本月3/31盛大開幕，將推出全品項優惠活動。</p>
+                        <a href="news.html">點擊查看更多</a>
+                    </div>
+                </div>
+
+                <div id="slide-3" class="scroll-item">
+                    <img src="img/banner3.png" alt="Picture 3" />
+                    <div class="banner-text">
+                        <p>DuoChill草莓季限定商品本周上市。</p>
+                        <a href="news.html  ">點擊查看更多</a>
+                    </div>
+                </div>
+
+                
             </div>
-
+            <nav id="navigate">
+                <a href="#"></a>
+                <a href="#"></a>
+                <a href="#"></a>
+            </nav>
 
 
 
@@ -175,16 +170,17 @@
             ]
 
             let dessert = ["雙層草莓蛋糕 Double strawberry", "草莓馬卡龍 Strawberry macaron", "三重巧克力蛋糕 Triple chocolate", "可麗露 Canele", "藍莓派 Blueberry pie", "肉桂捲 Cinnamon roll", "提拉米蘇 Tiramisu"]
-
+           
             $(".suginput").submit((e) => {
                 $(".chat-res").css({ display: "block" });
                 e.preventDefault();
+                
                 document.querySelector(".chat-res p").innerHTML = "";
                 let feel = $(".sug input[name = 'feel']:checked").attr("value");
                 let time = $(".sug input[name = 'time']:checked").attr("value");
                 let lunch = "";
                 if (time === "中午") {
-                    lunch = ", 或許再來個\"" + dessert[parseInt(Math.random() * dessert.length)].split(" ",1) + "\""
+                    lunch = ", 或許再來個\"" + dessert[parseInt(Math.random() * dessert.length)].split(" ", 1) + "\""
                 }
                 let mood = "";
                 let drink = "";
@@ -210,17 +206,27 @@
                 $(".chat-res").css({ display: "block" });
 
 
-                let text = "歡迎光臨DuoChill Cafe! 如果您在今天" + time + "想要來點" + feel + ", 推薦您可以來杯\"" + drink.split(" ",1) + "\", 加上一份\"" + food.split(" ",1) + "\"" + lunch + ", 讓您能夠" + mood;
+                text = "歡迎光臨DuoChill Cafe! 如果您在今天" + time + "想要來點" + feel + ", 推薦您可以來杯\"" + drink.split(" ", 1) + "\", 加上一份\"" + food.split(" ", 1) + "\"" + lunch + ", 讓您能夠" + mood;
+
+                let timeOutOut = setTimeout(() => {
+                    for (let i = 0; i < text.length; i++) {
+                        let timeOutIn = setTimeout(() => { document.querySelector(".chat-res p").innerHTML += text.charAt(i) }, 50 * i);
+                        $(".suginput input[type = 'submit']").click((e)=>{
+                            clearTimeout(timeOutIn);
+                        })
+                    }
+                    
+                }, 1000)
                 
-                setTimeout(()=>{ for(let i = 0; i < text.length; i++){
-                    setTimeout(()=>{ document.querySelector(".chat-res p").innerHTML += text.charAt(i)},50*i)
-                   
-                }},1000)
-               
-               
                 
-                
+                $(".suginput input[type = 'submit']").click((e)=>{
+                            clearTimeout(timeOutOut);
+                        })
+
+
             })
+
+
 
 
         })
