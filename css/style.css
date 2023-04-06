@@ -814,7 +814,7 @@ header a:hover {
 
     .foot {
         padding: 25px 10px;
-        font-size: 14px;
+        font-size: 12px;
         height: 160px;
     }
     .foot-social li a img{
@@ -1379,6 +1379,12 @@ header a:hover {
     color: white;
 }
 
+.timeline h1.time {
+    background-color: rgba(0, 0, 0, 1);
+    color: white;
+}
+
+
 .timeline h1:after {
     display: block;
     content: "";
@@ -1433,7 +1439,6 @@ header a:hover {
     order: 1;
     height: 100%;
     width: 55%;
-    /* margin-right: 15px; */
 }
 
 .time-content h2 {
@@ -1526,7 +1531,7 @@ header a:hover {
     
     .time-content {
         z-index: 1;
-        width: 90vw;
+        width: 80vw;
         height: 50vw;
         top: 0;
         left: 0;

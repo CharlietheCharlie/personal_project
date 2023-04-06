@@ -108,9 +108,17 @@ let month = d.getMonth();
 let date = d.getDate();
 let day = d.getDay();
 
+// ----------------Story timeline 切換----------------------------------------
 
-
-
+let timelinelis = document.querySelectorAll(".timeline li");
+timelinelis.forEach(li => {
+    li.addEventListener("click",(e)=>{
+        timelinelis.forEach(li => {
+            li.querySelector(".time-content").style.display = "none"
+        })
+       li.querySelector(".time-content").style.display = "flex";
+    })
+})
 
 // -----------------FAQ 常見問題-------------------------------
 let qandas = document.querySelectorAll(".qanda-content");
