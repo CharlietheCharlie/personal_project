@@ -113,13 +113,19 @@ let day = d.getDay();
 let timelinelis = document.querySelectorAll(".timeline li");
 timelinelis.forEach(li => {
     li.addEventListener("click",(e)=>{
+        e.stopPropagation();
         timelinelis.forEach(li => {
             li.querySelector(".time-content").style.display = "none"
         })
        li.querySelector(".time-content").style.display = "flex";
     })
 })
-
+document.addEventListener("click",(e)=>{
+    
+    timelinelis.forEach(li => {
+        li.querySelector(".time-content").style.display = "none"
+    })
+})
 // -----------------FAQ 常見問題-------------------------------
 let qandas = document.querySelectorAll(".qanda-content");
 let questions = document.querySelectorAll(".qanda-content .question");

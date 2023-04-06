@@ -1362,7 +1362,6 @@ header a:hover {
 
 .timeline h1 {
     text-align: center;
-
     font-size: 24px;
     width: 60px;
     line-height: 60px;
@@ -1451,16 +1450,19 @@ header a:hover {
     margin: 15px 10px 15px 0px;
 }
 
+@media screen and (min-width: 428px){
+    .time>h1:hover+.time-content {
+        animation: product-appear 1 .5s;
+        display: flex;
+        color: black;
+    }
+    
 
-.time>h1:hover+.time-content {
-    animation: product-appear 1 .5s;
-    display: flex;
-    color: black;
 }
 
 @media screen and (max-width:428px){
     .story{
-        padding-bottom: 5vw;
+        padding-bottom: 10vw;
     }
     .story-intro {
         width: 100vw;
@@ -1485,10 +1487,10 @@ header a:hover {
     
     .story-intro .story-intro-3 {
         width: 100%;
-        height: 90vw;
-        padding: 35vw 28vw 30vw 10vw;
+        height: 80vw;
+        padding: 30vw 28vw 30vw 10vw;
         right: -25vw;
-        bottom: 50vw;
+        bottom: 40vw;
     }
     
    
