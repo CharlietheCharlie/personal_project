@@ -126,7 +126,7 @@ header a:hover {
     width: 100%;
     display: block;
     position: absolute;
-    transition: .8s;
+    transition: .5s;
 }
 
 .ham .ham2{
@@ -150,7 +150,7 @@ header a:hover {
         align-items: center;
         background-image: url(../img/texture1.webp);
         transform: translateX(-100%);
-        transition: 0.8s;
+        transition: 0.5s;
         opacity: 0;
     }
     header.nav-hover>a>img {
@@ -300,8 +300,8 @@ header a:hover {
     .top-left{
         width: 100%;
         padding: 0;
-        padding-top: 10vh;
-        height: 20vh;
+        padding-top: 20vw;
+        height: 50vw;
         order: 1;
        
     }
@@ -315,7 +315,7 @@ header a:hover {
     .top-right{
         width: 100%;
         margin: 0;
-        height: 30vh;
+        height: 50vw;
         
     }
     .top h1{
@@ -400,7 +400,7 @@ header a:hover {
 @media screen and (max-width:428px){
     .scroll-item{
         width: 100%;
-        height: 30vh;
+        height: 50vw;
     }
     .scroll-item > img {
         border-radius: 10px;
@@ -412,7 +412,7 @@ header a:hover {
         transform: translateY(0);
         border-radius: 0 0 10px 10px;
         padding: 10px 20px;
-        font-size: 12px;
+        font-size: 16px;
     }
     
 }
@@ -557,7 +557,8 @@ header a:hover {
         bottom: none;
         height: 100%;
         gap: 10vh;
-        padding: 10vh;
+        padding: 10vh 0;
+        width: 80%;
     }
     .intro li{
         height: 28%;
@@ -769,7 +770,7 @@ header a:hover {
 
 .foot-social {
     display: flex;
-
+    align-items: center;
 }
 
 .foot-social li a {
@@ -787,7 +788,18 @@ header a:hover {
     right: 0;
     margin: auto;
 }
+@media screen and (max-width:428px){
 
+    .foot {
+        font-size: 12px;
+        height: 180px;
+    }
+    .foot-social li a img{
+        width: 20px;
+    }
+
+
+}
 /* ---------------最新消息CSS-------------------------- */
 
 
