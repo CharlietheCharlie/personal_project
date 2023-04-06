@@ -1247,6 +1247,82 @@ header a:hover {
     }
 }
 
+@media screen and (max-width:428px){
+    .product-sel {
+        margin: 10vw auto;
+        width: 75vw;
+    }
+    
+    
+    .product-sel button {
+        width: 20%;
+        padding: 2vw 0px;
+        font-size: 14px;
+    }
+    
+    
+    .product-content {
+        width:80vw;
+    }
+    
+    .product-content>img {
+        display: none;
+    }
+    
+    .product-list {
+        width: 100%;
+        display: flex;
+    }
+    
+    .product-detail {
+        width: 45%;
+        margin-bottom: 10vw;
+        height: 30vw;
+    }
+    .product-detail  p{
+        font-size: 14px;
+    }
+    
+    .product-detail > p {
+        padding-bottom: 0;
+        border-bottom: 0px solid #A4A4A4;
+    }
+    
+    .product-size {
+    
+        padding-top: 10px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .product-size span {
+        border: 1px solid black;
+        padding: 1.5px 10px;
+        width: 12px;
+        text-align: center;
+    }
+    
+    .product-size span.spec {
+        border: 1px solid #AB423B;
+        padding: 1.5px 5px;
+        width: 21px;
+        text-align: center;
+        color: #AB423B;
+    
+    }
+    
+    
+    
+    .product-content {
+        display: none;
+        animation: product-appear 1 .5s;
+    }
+
+
+
+
+}
 /* -------------品牌故事CSS-------------------- */
 
 .story {
