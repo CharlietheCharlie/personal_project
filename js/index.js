@@ -50,7 +50,7 @@ window.addEventListener("scroll",{})
     
     $('.scroll-item').eq(currentIndex).fadeIn();
 
-    setInterval(showNextSlide, 5000);
+    let slideInterval = setInterval(showNextSlide, 5000);
     
     function showNextSlide(){
         let nextIndex = (currentIndex + 1) % slideImgsCount;
@@ -65,11 +65,16 @@ window.addEventListener("scroll",{})
 
     slideButtons.forEach(button => {
         slideButtonArray.push(button);
-        button.addEventListener("click", (e)=>{
+        button.addEventListener("click", function(e){
             e.preventDefault();
+            clearInterval(slideInterval);
+            
+            
             $('.scroll-item').fadeOut();
             currentIndex = slideButtonArray.indexOf(button);
             $('.scroll-item').eq(currentIndex).fadeIn();
+
+            slideInterval = setInterval(showNextSlide, 5000);;
         })
     })
 
@@ -113,7 +118,7 @@ let questions = document.querySelectorAll(".qanda-content .question");
 
 questions.forEach(question => {
     let expand = question.lastElementChild;
-    expand.addEventListener("click", () => {
+    question.addEventListener("click", () => {
 
         // 如果answer是關閉的才執行
         if (question.parentNode.classList.contains("qanda-close")) {
