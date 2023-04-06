@@ -22,7 +22,7 @@ h1 {
 }
 
 body>section {
-    padding: 12vw 0 200px 0;
+    padding: 20vw 0 200px 0;
     margin: 0 auto;
     text-align: center;
 }
@@ -59,8 +59,12 @@ section>h2 {
         display: none;
     }
     section>h2 {
-        font-size: 20px;
+        font-size: 16px;
         font-weight: 700;
+    }
+    body>section {
+        padding: 20vw 0 0 0;
+
     }
     
 }
@@ -91,7 +95,9 @@ header .logo img {
 }
 
 .nav li {}
-
+.nav .nav-reserve{
+    display: none;
+}
 .nav li a {
     color: black;
     font-size: 18px;
@@ -182,7 +188,9 @@ header a:hover {
         font-size: 16px;
         width: 100vw;
     }
-
+    .nav .nav-reserve{
+        display: block;
+    }
     .nav li:not(:last-child)::after{
         content:"";
         display: block;
@@ -913,6 +921,56 @@ header a:hover {
     font-size: 20px;
     line-height: 100%;
 }
+@media screen and (max-width:428px){
+    .news ul {
+        margin: 10vw 0;
+    }
+    .news li {
+       
+        width: 100vw;
+        height: 45vw;
+        padding: 10px 5vw;
+        border-top: 1px solid #B4B4B4;
+    }
+    
+    .news .date {
+        flex-basis: 20vw;
+    }
+    
+    .news .date .year {
+        font-size: 22px;
+    }
+    
+    .news .date .day {
+        font-size: 30px;
+    }
+    
+    .news li>p {
+        flex-basis: 60vw;
+        font-size: 14px;
+        margin: 5vw 0;
+    }
+    .news li>a {
+        flex-basis: 5vw;
+        height: 100%;
+    }
+    
+    .news li>a p {
+        bottom: 50%;
+        transform: translateY(50%);
+    }
+    
+    .news .nxt {
+        color: black;
+        width: 20vw;
+        margin-bottom: 10vw;
+        align-items: center;
+    }
+    
+    .news .nxt p {
+        font-size: 14px;
+    }
+}
 
 /* ---------------分店資訊CSS------------------------------- */
 
@@ -1393,6 +1451,112 @@ header a:hover {
     animation: product-appear 1 .5s;
     display: flex;
     color: black;
+}
+
+@media screen and (max-width:428px){
+    .story{
+        padding-bottom: 5vw;
+    }
+    .story-intro {
+        width: 100vw;
+        font-size: 12px;
+        height: 240vw;
+    }
+
+ 
+    .story-intro .story-intro-1 {
+        width: 100%;
+        height: 80vw;
+        padding: 20vw ;
+        
+    }
+    
+    .story-intro .story-intro-2 {
+        width: 100%;
+        height: 80vw;
+        padding: 25vw 20vw ;
+        
+    }
+    
+    .story-intro .story-intro-3 {
+        width: 100%;
+        height: 90vw;
+        padding: 35vw 28vw 30vw 10vw;
+        right: -25vw;
+        bottom: 50vw;
+    }
+    
+   
+    
+    .timeline {
+        bottom: 0;
+        flex-direction: column;
+        width: auto;
+        left: 0;
+        gap: 10vw;
+    }
+    
+    .timeline h1 {
+        font-size: 20px;
+        margin: 0;
+    }
+    
+    
+    .timeline h1:after {
+        width: 10vw;
+        height: 8vw;
+        left:18%;
+        top: 100%;
+        transform: translateY(0) rotate(90deg);
+        background-size: cover;
+    }
+    .timeline h1.last:after {
+        width: 0;
+        height: 0;
+    }
+    
+    .timeline .time:last-child h1:before {
+        width: 25vw;
+        height: 20vw;
+        left:-18%;
+        top: 120%;
+        transform: translateY(0) rotate(90deg);
+        background-size: cover;
+    }
+    
+    .time-content {
+        z-index: 1;
+        width: 90vw;
+        height: 50vw;
+        top: 0;
+        left: 0;
+        padding: 10px;
+        background-color: white;
+        box-shadow: 10px 10px 4px rgba(0, 0, 0, 0.2);
+        border-radius: 10px;
+    }
+    
+    .time-content2 {
+        top: 0;
+        left: 0;
+    }
+    
+    .time-content img {
+        order: 1;
+        height: 100%;
+        width: 55%;
+    }
+    
+    .time-content h2 {
+        font-size: 16px;
+    }
+    
+    .time-content div {
+        margin: 15px 10px 15px 0px;
+    }
+
+
+
 }
 
 /* ---------------線上訂位CSS--------------------------- */
