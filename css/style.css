@@ -1140,7 +1140,7 @@ header a:hover {
     }
     
     .located .located-sel a {
-        font-size: 14px;
+        font-size: 12px;
         border: 2px solid black;
     }
     
@@ -1161,7 +1161,7 @@ header a:hover {
 
     
     .located .img-right>.store-img {
-        order: 0;
+        order: 1;
         
     }
     
@@ -1190,7 +1190,7 @@ header a:hover {
     }
 
     .located li .store-intro p:nth-child(5) {
-        font-size: 16px;
+        font-size: 12px;
         padding-top: 20px;
         padding-bottom: 20px;
         line-height: 1.6;
@@ -1203,8 +1203,8 @@ header a:hover {
     
     .located li .store-intro a>iframe {
         display: none;
-        width: 30vw;
-        height: 30vw;
+        width: 50vw;
+        height: 50vw;
         border-radius: 10px;
     }
     
@@ -1213,7 +1213,7 @@ header a:hover {
         display: block;
         animation: product-appear 1 1s;
         position: absolute;
-        top: -200px;
+        top: -160px;
         left: 0;
     }
     
@@ -1234,7 +1234,7 @@ header a:hover {
         line-height: 30vw;
         top: 0;
         left: 0;
-        font-size: 12px;
+        font-size: 10px;
     }
 
 
