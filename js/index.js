@@ -160,3 +160,25 @@ questions.forEach(question => {
 
     })
 })
+
+let faqCols = document.getElementsByClassName("qanda");
+
+let faqPages = document.querySelectorAll(".faq .faq-page button");
+
+
+
+faqPages.forEach(button => {
+    button.addEventListener("click", function(e){
+        faqPages.forEach(button=>{button.classList.remove("faq-click")});
+        button.classList.add("faq-click");
+        for(i = 0; i < faqCols.length; i++){
+            faqCols[i].style.display = "none";
+            if(button.innerHTML-1 == i){
+                faqCols[i].style.display = "block";
+            }
+        }
+
+    });
+    
+});
+
