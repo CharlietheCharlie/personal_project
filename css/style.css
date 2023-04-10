@@ -2044,8 +2044,8 @@ header a:hover {
 @media screen and (max-width:428px){
     .faq>.faq-bg {
         width: 100vw;
-        top: 15vw;
-        height: 80vw;
+        top: 35vw;
+        height: 120vw;
     }
     
     .faq form {
@@ -2089,8 +2089,8 @@ header a:hover {
    }
     
     .qanda-columns {
-        height: 130vw;
-        margin: 0 auto;
+        height: 100vw;
+        margin: 0 auto 20vw;
         display: relative;
     }
     
@@ -2123,7 +2123,7 @@ header a:hover {
     }
     
     .qanda-content .answer {
-        height: 150px;
+        height: 25vw;
         padding: 15px;
     
         border-radius: 0 0 5px 5px;
