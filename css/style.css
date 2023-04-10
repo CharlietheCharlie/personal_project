@@ -891,7 +891,7 @@ header a:hover {
 .news li>a {
     flex-basis: 100px;
     position: relative;
-    height: 190px;
+    align-self: flex-end;
     color: #525252;
 }
 
@@ -952,7 +952,7 @@ header a:hover {
     }
     .news li>a {
         flex-basis: 5vw;
-        height: 100%;
+        
     }
     
     .news li>a p {
@@ -1153,7 +1153,9 @@ header a:hover {
     }
     
     .located ul {
-        margin-top: 15vw;
+        margin-top: 0;
+        padding-top: 15vw;
+        padding-bottom: 5vw;
     }
     
     .located li {
