@@ -103,7 +103,6 @@ $(() => {
     $(".suginput").submit((e) => {
         $(".chat-res").css({ display: "block" });
         e.preventDefault();
-
         document.querySelector(".chat-res p").innerHTML = "";
         let feel = $(".sug input[name = 'feel']:checked").attr("value");
         let time = $(".sug input[name = 'time']:checked").attr("value");
@@ -156,6 +155,7 @@ $(() => {
     })
 
     $(".sug").click((e) => {
+        e.stopPropagation();
         $(".chat-res").css({ display: "none" });
     })
 
@@ -186,12 +186,64 @@ productTypes.forEach(type => {
 })
 
 
-// -------------訂位日曆載入---------------------------------------------
+// -------------訂位 reservation 店點 人數---------------------------------------------
+$(() => {
+    $.get("../json/location.json", (res) => {
+        $.each(res, (index, item) => {
+            $(".reservation #store").append(`<option value=${item.name} data-address=${item.address}>${item.name}</option>`);
 
-let d = new Date();
-let month = d.getMonth();
-let date = d.getDate();
-let day = d.getDay();
+        })
+
+    });
+    if (parseInt($(".reservation .guest p").text()) >= 1) {
+        $(".reservation .guest .plus").click(function (e) {
+            if (parseInt($(".reservation .guest p").text()) < 4) {
+                $(".reservation .guest .minus").removeClass("disable");
+                $(".reservation .guest p").text(parseInt($(".reservation .guest p").text()) + 1 + " 位");
+                if (parseInt($(".reservation .guest p").text()) === 4) {
+                    $(this).addClass("disable");
+                }
+            }
+
+        })
+        $(".reservation .guest .minus").click(function (e) {
+            if (parseInt($(".reservation .guest p").text()) > 1) {
+                $(".reservation .guest .plus").removeClass("disable");
+                $(".reservation .guest p").text(parseInt($(".reservation .guest p").text()) - 1 + " 位");
+                
+                if (parseInt($(".reservation .guest p").text()) === 1) {
+                    console.log($(this))
+                    $(this).addClass("disable")
+                }
+            }
+        })
+        
+    }
+    $(".reservation .progress1 button.next").click(function (e) {
+        $(".reservation .progress1").css({ display: "none" });
+        $(".reservation .progress2").css({ display: "block" });
+        let progress = $(".reservation .reservation-progress");
+        progress.find("li")[0].classList.remove("active");
+        progress.find("li")[1].classList.add("active");
+        $(".reservation .progress2 .guest").text($(".reservation .guest p").text());
+    });
+    $(".reservation .progress2 button.prev").click(function (e) {
+        $(".reservation .progress1").css({ display: "block" });
+        $(".reservation .progress2").css({ display: "none" });
+        let progress = $(".reservation .reservation-progress");
+        progress.find("li")[1].classList.remove("active");
+        progress.find("li")[0].classList.add("active");
+    })
+
+    $(".reservation .progress1 select").change(function(e){
+        $(".reservation .progress2 .store").text($(this).find("option:selected").text());
+        $(".reservation .progress2 .location").text( $(this).find("option:selected").attr("data-address"));
+    })
+    
+   
+
+});
+
 
 // ----------------品牌故事Story timeline 切換----------------------------------------
 
@@ -306,82 +358,86 @@ signButtons.forEach(button => {
 })
 
 let signUpPages = document.querySelectorAll(".member form.sign-up-form > div");
-let signUpPageButton = document.querySelector(".member>div form>button");
+let signUpPageButton = document.querySelectorAll(".member>div form>button");
 let pageClick = 0;
 let nextPage = "次頁"
-signUpPageButton.addEventListener("click", function (e) {
-    pageClick += 1;
-    e.preventDefault();
-    signUpPages.forEach(page => {
-        page.classList.toggle("page-click");
-        signUpPageButton.innerHTML = nextPage + "<br>" + ((pageClick) % signUpPages.length + 1) + " / 2";
-        if ((pageClick) % signUpPages.length + 1 === 1) {
-            nextPage = "次頁"
-        } else {
-            nextPage = "前頁"
-        }
+signUpPageButton.forEach(button => {
+    button.addEventListener("click", function (e) {
+        pageClick += 1;
+        e.preventDefault();
+        signUpPages.forEach(page => {
+            page.classList.toggle("page-click");
+            button.innerHTML = nextPage + "<br>" + ((pageClick) % signUpPages.length + 1) + " / 2";
+            if ((pageClick) % signUpPages.length + 1 === 1) {
+                nextPage = "次頁"
+            } else {
+                nextPage = "前頁"
+            }
+        })
+
+
     })
-
-
 })
 
-let signInForm = signForms[0];
-let signUpForm = signForms[1];
+let signInForm = document.querySelectorAll(".sign-in-form");
+let signUpForm = document.querySelectorAll(".sign-up-form");
 let checkText = "";
-signInForm.addEventListener("submit", (e) => {
-    e.preventDefault();
-    let formInputs = signInForm.querySelectorAll("input:not([type=submit])")
-    let send_data = true;
-    let email = signInForm.querySelector(".email");
-    let password = signInForm.querySelector(".password");
-    
-    formInputs.forEach(input => {
-        if (input.value === "") {
-            input.classList.add("-error");
-            send_data = false;
-        } else {
-            input.classList.remove("-error");
-        }
-    });
-    if (!send_data) {
-        alert("欄位尚有空值，請再檢查輸入欄位!");
+signInForm.forEach(form => {
+    form.addEventListener("submit", (e) => {
         e.preventDefault();
-    }
+        let formInputs = form.querySelectorAll("input:not([type=submit])")
+        let send_data = true;
+        let email = form.querySelector(".email");
+        let password = form.querySelector(".password");
 
-})
-
-signUpForm.addEventListener("submit", (e) => {
-    checkText = "";
-    e.preventDefault();
-    console.log("e");
-    let formInputs = signUpForm.querySelectorAll("input:not([type=submit])")
-    let send_data = true;
-    let email = signUpForm.querySelector(".email");
-    let name = signUpForm.querySelector(".name");
-    let phone = signUpForm.querySelector(".phone");
-    let password = signUpForm.querySelector(".password");
-    let passwordConfirm = signUpForm.querySelector(".password-confirm");
-    formInputs.forEach(input => {
-        if (input.value === "") {
-            input.classList.add("-error");
-            send_data = false;
-        } else {
-            input.classList.remove("-error");
+        formInputs.forEach(input => {
+            if (input.value === "") {
+                input.classList.add("-error");
+                send_data = false;
+            } else {
+                input.classList.remove("-error");
+            }
+        });
+        if (!send_data) {
+            alert("欄位尚有空值，請再檢查輸入欄位!");
+            e.preventDefault();
         }
-    });
-    var regex = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-    if (!regex.test(email.value)) {
-        email.classList.add("-error");
-        send_data = false;
-        checkText += "請確認E-mail格式是否正確\n";
-    } else {
-        email.classList.remove("-error");
-    }
 
-    if (!send_data) {
-        alert(checkText+"欄位尚有空值，請再檢查輸入欄位!");
-        e.preventDefault();
-    }
-
+    })
 })
+signUpForm.forEach(form => {
+    form.addEventListener("submit", (e) => {
+        checkText = "";
+        e.preventDefault();
+        let formInputs = form.querySelectorAll("input:not([type=submit])")
+        let send_data = true;
+        let email = form.querySelector(".email");
+        let name = form.querySelector(".name");
+        let phone = form.querySelector(".phone");
+        let password = form.querySelector(".password");
+        let passwordConfirm = form.querySelector(".password-confirm");
+        formInputs.forEach(input => {
+            if (input.value === "") {
+                input.classList.add("-error");
+                send_data = false;
+            } else {
+                input.classList.remove("-error");
+            }
+        });
+        var regex = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+        if (!regex.test(email.value)) {
+            email.classList.add("-error");
+            send_data = false;
+            checkText += "請確認E-mail格式是否正確\n";
+        } else {
+            email.classList.remove("-error");
+        }
+
+        if (!send_data) {
+            alert(checkText + "欄位尚有空值，請再檢查輸入欄位!");
+            e.preventDefault();
+        }
+
+    });
+});
 

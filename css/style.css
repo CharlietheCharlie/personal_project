@@ -1873,6 +1873,66 @@ header a:hover {
     color: white;
 }
 
+.reservation #store {
+    width: 250px;
+    text-align: center;
+    margin-top: 40px;
+    height: 25px;
+    border: 2px solid black;
+    border-radius: 2px;
+    font-weight: 500;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+.reservation .guest {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    gap: 10px
+}
+.reservation .guest button{
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    width: 30px;
+    color:black;
+}
+.reservation .guest button.disable{
+    color:rgba(0, 0, 0, 0.2)
+}
+.reservation .guest .minus{
+    font-size: 30px;
+}
+
+.reservation .guest-choose {
+    justify-content: space-between;
+    width: 130px;
+    display: flex;
+    align-items: center;
+}
+.reservation button{
+    border: 2px solid black;
+    line-height: 30px;
+    width: 200px;
+    margin: 30px 0;
+}
+.reservation button.next{
+    background-color:black;
+    color: white;
+}
+.reservation button.prev{
+    background-color:white;
+    color: black;
+}
+
+.reservation .information{
+    margin: 100px;
+}
+.reservation .information h3{
+    margin: 50px;
+}
+
 @media screen and (max-width:428px) {
 
 
@@ -1912,54 +1972,6 @@ header a:hover {
     }
 }
 
-/* .calender {
-    display: flex;
-    flex-direction: column;
-    width: 540px;
-    margin: 100px auto 0;
-}
-
-.month {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 40px;
-    gap: 30px;
-    font-size: 20px;
-}
-
-.month>div {
-    width: 20px;
-}
-
-.weekdays {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-
-}
-
-.weekdays .weekday {
-    flex-basis: 60px;
-    height: 30px;
-    margin: 0 6px;
-    font-weight: 500;
-
-}
-
-.days {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-
-}
-
-.days .day {
-    flex-basis: 60px;
-    height: 62px;
-    margin: 8px 6px;
-    background-color: #F2F2F2;
-    border: none;
-} */
 
 
 
@@ -2244,21 +2256,24 @@ header a:hover {
     box-shadow: 8px 8px 4px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
 }
-.member>div form.sign-up-form{
+
+.member>div form.sign-up-form {
     position: relative;
     transform: translateY(-30px) translateX(-50%);
 }
-.member>div form.sign-up-form > div{
+
+.member>div form.sign-up-form>div {
     position: absolute;
     display: none;
     left: 50%;
-    transform:translateX(-50%);
+    transform: translateX(-50%);
 }
-.member>div form.sign-up-form > div.page-click{
+
+.member>div form.sign-up-form>div.page-click {
     display: block;
 }
 
-.member>div > button {
+.member>div>button {
     text-align: center;
     font-size: 20px;
     padding: 10px;
@@ -2272,22 +2287,24 @@ header a:hover {
     color: black;
 }
 
-.member>div > button.non-active{
+.member>div>button.non-active {
     background: rgb(227, 195, 171, .6);
 }
 
 .member>div button.sign-up {
     right: 6.8%;
     left: 51.96%;
-    
+
 }
-.member>div form{
+
+.member>div form {
     position: absolute;
     display: none;
     left: 50%;
     transform: translateX(-50%);
 }
-.member>div form>button{
+
+.member>div form>button {
     border: none;
     position: absolute;
     right: -35px;
@@ -2297,6 +2314,7 @@ header a:hover {
     font-size: 16px;
     font-family: 'Noto Sans TC', sans-serif;
 }
+
 .member>div input:not([type=submit]) {
     box-sizing: border-box;
     margin: 10px 0;
@@ -2324,19 +2342,20 @@ header a:hover {
     color: white;
     font-size: 20px;
 }
-.member>div #btn a{
-    color:rgba(52, 52, 52, 1);
+
+.member>div #btn a {
+    color: rgba(52, 52, 52, 1);
 }
 
-@media screen and (max-width:428px){
+@media screen and (max-width:428px) {
 
     .member {
         margin-top: 15vw;
         padding-top: 30vw;
         padding-bottom: 15vw;
-        
+
     }
-   
+
     .member>div {
         position: relative;
         width: 90vw;
@@ -2344,28 +2363,30 @@ header a:hover {
         margin: 0 auto;
         padding: 20px;
     }
-    .member>div form.sign-up-form{
+
+    .member>div form.sign-up-form {
         transform: translateY(0px) translateX(-50%);
         height: 20px;
     }
 
-    
-    .member>div > button {
+
+    .member>div>button {
         font-size: 16px;
         padding: 2vw 0vw;
         left: 6.8%;
         right: 51.96%;
         transform: translateY(calc(-100% - 24px));
     }
-    
 
-    .member>div form>button{
+
+    .member>div form>button {
         padding: 0;
         right: -10px;
         bottom: -320px;
         font-size: 16px;
         color: black;
     }
+
     .member>div input:not([type=submit]) {
         box-sizing: border-box;
         margin: 10px 0;
@@ -2384,9 +2405,9 @@ header a:hover {
 
 }
 
-.-error{
+.-error {
     border: 1px solid red !important;
-  }
+}
 
 /* ---------------未完成專區----------------------- */
 
