@@ -28,60 +28,60 @@ window.addEventListener("scroll", navbarHide);
 
 // --------------------導覽列 RWD---------------------------------
 
-    let ham = document.querySelector(".head .ham");
-    let li_decs = document.querySelectorAll(".nav li:not(:last-child)::after")
-    ham.addEventListener("click",(e)=>{
-        e.preventDefault();
-        ham.previousElementSibling.classList.toggle("click");
-        ham.children[0].classList.toggle("click");
-        ham.children[1].classList.toggle("click");
-        ham.children[2].classList.toggle("click");
+let ham = document.querySelector(".head .ham");
+let li_decs = document.querySelectorAll(".nav li:not(:last-child)::after")
+ham.addEventListener("click", (e) => {
+    e.preventDefault();
+    ham.previousElementSibling.classList.toggle("click");
+    ham.children[0].classList.toggle("click");
+    ham.children[1].classList.toggle("click");
+    ham.children[2].classList.toggle("click");
 
 })
-window.addEventListener("scroll",{})
+window.addEventListener("scroll", {})
 
 // ------------------------INDEX 輪播-----------------------------------
 
 
 
-    
-    let slideImgsCount = $('.scroll-item img').length;
-    let currentIndex = 0;
-    
-    $('.scroll-item').eq(currentIndex).fadeIn();
 
-    let slideInterval = setInterval(showNextSlide, 5000);
-    
-    function showNextSlide(){
-        let nextIndex = (currentIndex + 1) % slideImgsCount;
-        $('.scroll-item').eq(currentIndex).fadeOut();
-        $('.scroll-item').eq(nextIndex).fadeIn();
-        currentIndex = nextIndex;
-    }
-    
-   
-    slideButtons = document.querySelectorAll("#navigate a");
-    slideButtonArray = [];
+let slideImgsCount = $('.scroll-item img').length;
+let currentIndex = 0;
 
-    slideButtons.forEach(button => {
-        slideButtonArray.push(button);
-        button.addEventListener("click", function(e){
-            e.preventDefault();
-            clearInterval(slideInterval);
-            
-            
-            $('.scroll-item').fadeOut();
-            currentIndex = slideButtonArray.indexOf(button);
-            $('.scroll-item').eq(currentIndex).fadeIn();
+$('.scroll-item').eq(currentIndex).fadeIn();
 
-            slideInterval = setInterval(showNextSlide, 5000);;
-        })
+let slideInterval = setInterval(showNextSlide, 5000);
+
+function showNextSlide() {
+    let nextIndex = (currentIndex + 1) % slideImgsCount;
+    $('.scroll-item').eq(currentIndex).fadeOut();
+    $('.scroll-item').eq(nextIndex).fadeIn();
+    currentIndex = nextIndex;
+}
+
+
+slideButtons = document.querySelectorAll("#navigate a");
+slideButtonArray = [];
+
+slideButtons.forEach(button => {
+    slideButtonArray.push(button);
+    button.addEventListener("click", function (e) {
+        e.preventDefault();
+        clearInterval(slideInterval);
+
+
+        $('.scroll-item').fadeOut();
+        currentIndex = slideButtonArray.indexOf(button);
+        $('.scroll-item').eq(currentIndex).fadeIn();
+
+        slideInterval = setInterval(showNextSlide, 5000);;
     })
+})
 
-   // -------------------小助手-----------------------------
+// -------------------小助手-----------------------------
 
 
-   $(() => {
+$(() => {
 
     let relaxd = ["美式 Americano", "拿鐵 Latte", "卡布奇諾 Cappuccino", "白咖啡 Flat White", "摩卡 Mocha", "草莓奶昔 Strawberry smoothie", "草莓冰茶 Strawberry iced tea", "伯爵紅茶 Earl gray tea", "茉莉綠茶 Jasmine green tea", "香蕉果昔 Banana Smoothie", "莓果果昔 Mixed berry Smoothie"];
     let relaxf = ["草莓奶霜吐司 Cream strawberry bread", "雙雞酪梨三明治 Double chicken avocado sandwich", "經典牛肉起司三明治 Classic beef sandwich", "煙燻豬里肌帕尼尼 Smoked pork panino", "菠菜鮭魚法式鹹派 Salmon & Spinach Quiche", "馬鈴薯沙拉捲餅 Potato salad burrito"];
@@ -99,11 +99,11 @@ window.addEventListener("scroll",{})
     ]
 
     let dessert = ["雙層草莓蛋糕 Double strawberry", "草莓馬卡龍 Strawberry macaron", "三重巧克力蛋糕 Triple chocolate", "可麗露 Canele", "藍莓派 Blueberry pie", "肉桂捲 Cinnamon roll", "提拉米蘇 Tiramisu"]
-   
+
     $(".suginput").submit((e) => {
         $(".chat-res").css({ display: "block" });
         e.preventDefault();
-        
+
         document.querySelector(".chat-res p").innerHTML = "";
         let feel = $(".sug input[name = 'feel']:checked").attr("value");
         let time = $(".sug input[name = 'time']:checked").attr("value");
@@ -140,22 +140,22 @@ window.addEventListener("scroll",{})
         let timeOutOut = setTimeout(() => {
             for (let i = 0; i < text.length; i++) {
                 let timeOutIn = setTimeout(() => { document.querySelector(".chat-res p").innerHTML += text.charAt(i) }, 50 * i);
-                $(".suginput input[type = 'submit']").click((e)=>{
+                $(".suginput input[type = 'submit']").click((e) => {
                     clearTimeout(timeOutIn);
                 })
             }
-            
+
         }, 1000)
-        
-        
-        $(".suginput input[type = 'submit']").click((e)=>{
-                    clearTimeout(timeOutOut);
-                })
+
+
+        $(".suginput input[type = 'submit']").click((e) => {
+            clearTimeout(timeOutOut);
+        })
 
 
     })
 
-    $(".sug").click((e)=>{
+    $(".sug").click((e) => {
         $(".chat-res").css({ display: "none" });
     })
 
@@ -197,16 +197,16 @@ let day = d.getDay();
 
 let timelinelis = document.querySelectorAll(".timeline li");
 timelinelis.forEach(li => {
-    li.addEventListener("click",(e)=>{
+    li.addEventListener("click", (e) => {
         e.stopPropagation();
         timelinelis.forEach(li => {
             li.querySelector(".time-content").style.display = "none"
         })
-       li.querySelector(".time-content").style.display = "flex";
+        li.querySelector(".time-content").style.display = "flex";
     })
 })
-document.addEventListener("click",(e)=>{
-    
+document.addEventListener("click", (e) => {
+
     timelinelis.forEach(li => {
         li.querySelector(".time-content").style.display = "none"
     })
@@ -253,18 +253,18 @@ let faqPages = document.querySelectorAll(".faq .faq-page button");
 
 
 faqPages.forEach(button => {
-    button.addEventListener("click", function(e){
-        faqPages.forEach(button=>{button.classList.remove("faq-click")});
+    button.addEventListener("click", function (e) {
+        faqPages.forEach(button => { button.classList.remove("faq-click") });
         button.classList.add("faq-click");
-        for(i = 0; i < faqCols.length; i++){
+        for (i = 0; i < faqCols.length; i++) {
             faqCols[i].style.display = "none";
-            if(button.innerHTML-1 == i){
+            if (button.innerHTML - 1 == i) {
                 faqCols[i].style.display = "block";
             }
         }
 
     });
-    
+
 });
 
 // --------------------located 門市資訊地圖-----------------------------------------
@@ -273,15 +273,15 @@ let mapAnchors = document.querySelectorAll(".store-intro a");
 let mapIframes = document.querySelectorAll(".store-intro a iframe");
 
 mapAnchors.forEach(anchor => {
-    anchor.addEventListener("click",(e)=>{
+    anchor.addEventListener("click", (e) => {
         e.stopPropagation();
         anchor.querySelector("iframe").classList.add("iframeclick");
-        
+
     })
 })
 
-document.addEventListener("click",(e)=>{
-    mapIframes.forEach(iframe=>{
+document.addEventListener("click", (e) => {
+    mapIframes.forEach(iframe => {
         iframe.classList.remove("iframeclick");
     })
 
@@ -292,16 +292,16 @@ document.addEventListener("click",(e)=>{
 let signButtons = document.querySelectorAll(".member .sign > button");
 let signForms = document.querySelectorAll(".member form");
 signButtons.forEach(button => {
-    button.addEventListener("click", function(e){
-        signButtons.forEach(button=>{button.classList.add("non-active");})
+    button.addEventListener("click", function (e) {
+        signButtons.forEach(button => { button.classList.add("non-active"); })
         button.classList.remove("non-active");
         signForms.forEach(form => {
             form.style.display = "none";
-            if(button.classList.contains(form.classList)){
+            if (button.classList.contains(form.classList)) {
                 form.style.display = "block"
             }
         })
-        
+
     })
 })
 
@@ -309,15 +309,15 @@ let signUpPages = document.querySelectorAll(".member form.sign-up-form > div");
 let signUpPageButton = document.querySelector(".member>div form>button");
 let pageClick = 0;
 let nextPage = "次頁"
-signUpPageButton.addEventListener("click", function(e){
+signUpPageButton.addEventListener("click", function (e) {
     pageClick += 1;
     e.preventDefault();
     signUpPages.forEach(page => {
         page.classList.toggle("page-click");
-        signUpPageButton.innerHTML = nextPage +"<br>"+ ((pageClick)%signUpPages.length+1) + " / 2";
-        if((pageClick)%signUpPages.length+1 === 1){
+        signUpPageButton.innerHTML = nextPage + "<br>" + ((pageClick) % signUpPages.length + 1) + " / 2";
+        if ((pageClick) % signUpPages.length + 1 === 1) {
             nextPage = "次頁"
-        }else{
+        } else {
             nextPage = "前頁"
         }
     })
@@ -325,4 +325,51 @@ signUpPageButton.addEventListener("click", function(e){
 
 })
 
+let signInForm = signForms[0];
+let signUpForm = signForms[1];
+let checkText = "";
+signInForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    let formInputs = signInForm.querySelectorAll("input:not([type=submit])")
+    let send_data = true;
+    let email = signInForm.querySelector(".email");
+    let password = signInForm.querySelector(".password");
+    
+    formInputs.forEach(input => {
+        if (input.value === "") {
+            input.classList.add("-error");
+            send_data = false;
+        } else {
+            input.classList.remove("-error");
+        }
+    });
+        if(email.value)
+    if (!send_data) {
+        alert("請再檢查輸入欄位!");
+        e.preventDefault();
+    }
+
+})
+
+signUpForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    console.log("e");
+    let formInputs = signUpForm.querySelectorAll("input:not([type=submit])")
+    let send_data = true;
+    formInputs.forEach(input => {
+        if (input.value === "") {
+            input.classList.add("-error");
+            send_data = false;
+        } else {
+            input.classList.remove("-error");
+        }
+
+
+    })
+    if (!send_data) {
+        alert("請再檢查輸入欄位!");
+        e.preventDefault();
+    }
+
+})
 

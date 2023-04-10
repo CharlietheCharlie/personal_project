@@ -2297,7 +2297,7 @@ header a:hover {
     font-size: 16px;
     font-family: 'Noto Sans TC', sans-serif;
 }
-.member>div input:not([type=button]) {
+.member>div input:not([type=submit]) {
     box-sizing: border-box;
     margin: 10px 0;
     height: 35px;
@@ -2366,7 +2366,7 @@ header a:hover {
         font-size: 16px;
         color: black;
     }
-    .member>div input:not([type=button]) {
+    .member>div input:not([type=submit]) {
         box-sizing: border-box;
         margin: 10px 0;
         height: 35px;
@@ -2384,7 +2384,9 @@ header a:hover {
 
 }
 
-
+.-error{
+    border: 1px solid red !important;
+  }
 
 /* ---------------未完成專區----------------------- */
 
