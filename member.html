@@ -18,23 +18,89 @@
     <a href="reservation.html" class="reserve"><img src="img/reserve.png" alt=""></a>
     <!-- nav bar -->
     <header class="head">
-        <a href="index.html"><img src="img/logo.svg" alt="LOGO"></a>
+        <a class="logo" href="index.html"><img src="img/logo.svg" alt="LOGO"></a>
         <ul class="nav">
+            <li class="nav-reserve"><a href="reservation.html">線上訂位</a></li>
             <li><a href="news.html">都趣最新</a></li>
             <li><a href="story.html">品牌理念</a></li>
             <li><a href="product.html">查看菜單</a></li>
             <li><a href="located.html">門市資訊</a></li>
             <li><a href="member.html">會員登入</a></li>
         </ul>
+        <a class="ham" href="#">
+            <img src="img/head_burger.svg" class="ham1" alt="">
+            <img src="img/head_burger.svg" class="ham2" alt="">
+            <img src="img/head_burger.svg" class="ham3" alt="">
+        </a>
     </header>
     <!-- 最新消息 -->
-    <section class="reservation">
-        <h2>會員專區</h2>
-        <h2>member</h2>
+    <section class="member">
+        <div class="sign">
+            <button class="sign-in-form">會員登入 SIGN IN</button>
+            <button class="sign-up non-active sign-up-form">會員註冊 SIGN UP</button>
+            <form class="sign-in-form" style="display: block;" action=" ">
+                <label for="email">請輸入您的帳號(電子信箱Email address)
 
-        
+                </label>
+                <br>
+                <input type="email" name="email" class="email" placeholder="請輸入信箱">
+                <br>
+                <label for="password">密碼 Password
 
-            <p class="uncomplete">會員專區準備中<br>coming soon...</p>
+                </label>
+                <br>
+                <input type="password" name="password" class="password" placeholder="請輸入密碼">
+                <br>
+                <div id="btn">
+                    <input type="button" value="登入" class="signIn">
+                    <a href="#">忘記密碼?</a>
+                </div>
+            </form>
+            
+            <form class="sign-up-form" action=" ">
+                <div class="page1 page-click">
+                    <label for="email">您的電子信箱(將為您的登入帳號)
+                        Email address (this would be your login account)*
+                    </label>
+                    <br>
+                    <input type="email" name="email" class="email" placeholder="請輸入信箱">
+                    <br>
+                    <label for="name">您的姓名 Your name*
+                    </label>
+                    <br>
+                    <input type="text" name="name" class="name" placeholder="請輸入姓名">
+                    <br>
+                    <label for="birthday">生日 Date of birth
+                    </label>
+                    <br>
+                    <input type="date" name="birthday" class="birthday" placeholder="請輸入生日">
+                    <br>
+                </div>
+                <div class="page2">
+                    <label for="phone">手機號碼 Mobile phone number
+                    </label>
+                    <br>
+                    <input type="number" name="phone" class="phone" placeholder="請輸入手機號碼">
+                    <br>
+                    <label for="password">登入密碼確認 Confirm Password
+                    </label>
+                    <br>
+                    <input type="password" name="password" class="password" placeholder="請輸入密碼">
+                    <br>
+    
+                    <label for="password">密碼 Password
+                    </label>
+                    <br>
+                    <input type="password" name="password" class="password" placeholder="請輸入密碼">
+                    <br>
+                    <div id="btn">
+                        <input type="button" value="確認，發送驗證碼" class="signUp">
+                    </div>
+                </div>
+                <button>次頁<br>1 / 2</button>
+            </form>
+        </div>
+           
 
 
     </section>
@@ -54,6 +120,8 @@
         </ul>
         <p><img src="img/foot-logo.png">©2023 Copyright DouChill Café 都趣咖啡</p>
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="js/index.js"></script>
 </body>
 
 </html>
