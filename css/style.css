@@ -2269,6 +2269,7 @@ header a:hover {
     background: #E3C3AB;
     border-radius: 10px 10px 0px 0px;
     border: none;
+    color: black;
 }
 
 .member>div > button.non-active{
@@ -2331,6 +2332,7 @@ header a:hover {
 
     .member {
         margin-top: 15vw;
+        padding-top: 30vw;
         padding-bottom: 15vw;
         
     }
@@ -2338,7 +2340,7 @@ header a:hover {
     .member>div {
         position: relative;
         width: 90vw;
-        height: 110vw;
+        height: 120vw;
         margin: 0 auto;
         padding: 20px;
     }
@@ -2353,7 +2355,7 @@ header a:hover {
         padding: 2vw 0vw;
         left: 6.8%;
         right: 51.96%;
-        transform: translateY(calc(-100% - 22px));
+        transform: translateY(calc(-100% - 24px));
     }
     
 
@@ -2364,6 +2366,7 @@ header a:hover {
         line-height: 25px;
         background-color: #fff;
         font-size: 16px;
+        color: black;
     }
     .member>div input:not([type=button]) {
         box-sizing: border-box;
