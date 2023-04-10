@@ -327,7 +327,7 @@ header a:hover {
     .top {
         flex-direction: column;
         text-align: center;
-        padding: 20vw 10px;
+        padding: 20vw 10px 15vw;
 
     }
 
@@ -582,7 +582,6 @@ header a:hover {
     .intro {
         height: 250vw;
         padding: 0;
-        ;
     }
 
     .intro .deco1,
@@ -592,7 +591,7 @@ header a:hover {
     }
 
     .intro h2 {
-        top: -10vw;
+        top: 3vw;
         bottom: none;
         color: rgba(52, 52, 52);
         font-size: 16px;
@@ -606,8 +605,8 @@ header a:hover {
         top: 1vh;
         bottom: none;
         height: 100%;
-        gap: 20vw;
-        padding: 10vh 0;
+        gap: 15vw;
+        padding: 10vw 0;
         width: 90%;
     }
 
@@ -2360,11 +2359,9 @@ header a:hover {
     
 
     .member>div form>button{
-
+        padding: 0;
         right: -10px;
         bottom: -320px;
-        line-height: 25px;
-        background-color: #fff;
         font-size: 16px;
         color: black;
     }
