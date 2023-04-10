@@ -40,7 +40,7 @@ window.addEventListener("scroll", navbarHide);
 })
 window.addEventListener("scroll",{})
 
-// ------------------------輪播-----------------------------------
+// ------------------------INDEX 輪播-----------------------------------
 
 
 
@@ -108,7 +108,7 @@ let month = d.getMonth();
 let date = d.getDate();
 let day = d.getDay();
 
-// ----------------Story timeline 切換----------------------------------------
+// ----------------品牌故事Story timeline 切換----------------------------------------
 
 let timelinelis = document.querySelectorAll(".timeline li");
 timelinelis.forEach(li => {
@@ -182,3 +182,23 @@ faqPages.forEach(button => {
     
 });
 
+// --------------------located 門市資訊地圖-----------------------------------------
+
+let mapAnchors = document.querySelectorAll(".store-intro a");
+let mapIframes = document.querySelectorAll(".store-intro a iframe");
+
+mapAnchors.forEach(anchor => {
+    anchor.addEventListener("click",(e)=>{
+        e.stopPropagation();
+        anchor.querySelector("iframe").classList.add("iframeclick");
+        
+    })
+})
+
+document.addEventListener("click",(e)=>{
+    console.log("bb")
+    mapIframes.forEach(iframe=>{
+        iframe.classList.remove("iframeclick");
+    })
+
+})

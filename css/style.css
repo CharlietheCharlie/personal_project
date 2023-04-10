@@ -1086,14 +1086,18 @@ header a:hover {
     border-radius: 10px;
 }
 
-
-.located li .store-intro a:hover>iframe {
-    display: block;
-    animation: product-appear 1 1s;
-    position: absolute;
-    top: -200px;
-    left: 0;
+@media screen and (min-width: 428px) {
+    .located li .store-intro a:hover>iframe {
+        display: block;
+        animation: product-appear 1 1s;
+        position: absolute;
+        top: -200px;
+        left: 0;
+    }
+    
+    
 }
+
 
 
 .located .store1 {
@@ -1135,11 +1139,15 @@ header a:hover {
     left: 0;
 }
 @media screen and (max-width:428px){
+
+
     .located .located-sel {
-        margin-top: 10vw;
+        margin-top: 0;
+        padding-top: 10vw;
     }
     
     .located .located-sel a {
+        padding: 6px 9px;
         font-size: 12px;
         border: 2px solid black;
     }
@@ -1156,7 +1164,7 @@ header a:hover {
     }
     
     .located li:last-child {
-        margin-bottom: 20vw;
+        padding-bottom: 20vw;
     }
 
     
@@ -1185,7 +1193,7 @@ header a:hover {
     }
     
     .located li .store-intro h2 {
-        font-size: 20px;
+        font-size: 18px;
         padding-bottom: 2vw;
     }
 
@@ -1209,7 +1217,7 @@ header a:hover {
     }
     
     
-    .located li .store-intro a:hover>iframe {
+    .located li .store-intro iframe.iframeclick {
         display: block;
         animation: product-appear 1 1s;
         position: absolute;
