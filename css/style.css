@@ -130,7 +130,7 @@ header a:hover {
 .head .ham{
     display: none;
     position: relative;
-    width: 18px;
+    width: 20px;
     height: 15px;
 }
 .head .ham > img{
