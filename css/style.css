@@ -1377,7 +1377,7 @@ header a:hover {
     
     
     .product-content {
-        width:80vw;
+        width:85vw;
     }
     
     .product-content>img {
@@ -1390,7 +1390,7 @@ header a:hover {
     }
     
     .product-detail {
-        width: 45%;
+        width: 48%;
         margin-bottom: 10vw;
         height: 30vw;
     }
@@ -1412,19 +1412,14 @@ header a:hover {
     }
     
     .product-size span {
-        border: 1px solid black;
-        padding: 1.5px 10px;
+        font-size: 12px;
+        padding: 1.5px 5.5px;
         width: 12px;
         text-align: center;
     }
     
     .product-size span.spec {
-        border: 1px solid #AB423B;
-        padding: 1.5px 5px;
-        width: 21px;
-        text-align: center;
-        color: #AB423B;
-    
+        padding: 1.5px;    
     }
     
     
@@ -1725,7 +1720,7 @@ header a:hover {
     .time-content {
         z-index: 1;
         width: 80vw;
-        height: 50vw;
+        height: 40vw;
         top: 0;
         left: 0;
         padding: 10px;
