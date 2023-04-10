@@ -343,19 +343,24 @@ signInForm.addEventListener("submit", (e) => {
             input.classList.remove("-error");
         }
     });
-        if(email.value)
     if (!send_data) {
-        alert("請再檢查輸入欄位!");
+        alert("欄位尚有空值，請再檢查輸入欄位!");
         e.preventDefault();
     }
 
 })
 
 signUpForm.addEventListener("submit", (e) => {
+    checkText = "";
     e.preventDefault();
     console.log("e");
     let formInputs = signUpForm.querySelectorAll("input:not([type=submit])")
     let send_data = true;
+    let email = signUpForm.querySelector(".email");
+    let name = signUpForm.querySelector(".name");
+    let phone = signUpForm.querySelector(".phone");
+    let password = signUpForm.querySelector(".password");
+    let passwordConfirm = signUpForm.querySelector(".password-confirm");
     formInputs.forEach(input => {
         if (input.value === "") {
             input.classList.add("-error");
@@ -363,11 +368,18 @@ signUpForm.addEventListener("submit", (e) => {
         } else {
             input.classList.remove("-error");
         }
+    });
+    var regex = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+    if (!regex.test(email.value)) {
+        email.classList.add("-error");
+        send_data = false;
+        checkText += "請確認E-mail格式是否正確\n";
+    } else {
+        email.classList.remove("-error");
+    }
 
-
-    })
     if (!send_data) {
-        alert("請再檢查輸入欄位!");
+        alert(checkText+"欄位尚有空值，請再檢查輸入欄位!");
         e.preventDefault();
     }
 
