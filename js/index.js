@@ -237,6 +237,13 @@ $(() => {
         progress.find("li")[1].classList.remove("active");
         progress.find("li")[0].classList.add("active");
     })
+    $(".reservation .progress2 button.next").click(function (e) {
+        $(".reservation .progress3").css({ display: "block" });
+        $(".reservation .progress2").css({ display: "none" });
+        let progress = $(".reservation .reservation-progress");
+        progress.find("li")[1].classList.remove("active");
+        progress.find("li")[2].classList.add("active");
+    })
 
     $(".reservation .progress1 select").change(function(e){
         $(".reservation .progress2 .store").text($(this).find("option:selected").text());
@@ -321,6 +328,13 @@ faqPages.forEach(button => {
     });
 
 });
+let faqSubmit = document.querySelector(".faq form button[type=submit]");
+faqSubmit.addEventListener("click",(e)=>{
+    document.querySelector(".faq form textarea").value="";
+    e.preventDefault();
+    alert("謝謝，我們已收到您的來訊!")
+    
+})
 
 // --------------------located 門市資訊地圖-----------------------------------------
 
@@ -402,7 +416,7 @@ signInForm.forEach(form => {
             }
         });
         if (!send_data) {
-            alert("欄位尚有空值，請再檢查輸入欄位!");
+            alert("請輸入帳號及密碼");
             e.preventDefault();
         }
 
@@ -427,13 +441,28 @@ signUpForm.forEach(form => {
                 input.classList.remove("-error");
             }
         });
-        var regex = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+        let regex = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
         if (!regex.test(email.value)) {
             email.classList.add("-error");
             send_data = false;
             checkText += "請確認E-mail格式是否正確\n";
         } else {
             email.classList.remove("-error");
+        }
+        regex =  /[0-9]{8}$/;
+        if (!regex.test(phone.value)) {
+            phone.classList.add("-error");
+            send_data = false;
+            checkText += "請確認手機格式是否正確\n";
+        } else {
+            phone.classList.remove("-error");
+        }
+        if (passwordConfirm.value !== password.value) {
+            passwordConfirm.classList.add("-error");
+            send_data = false;
+            checkText += "密碼確認欄位需與密碼相同\n";
+        } else {
+            passwordConfirm.classList.remove("-error");
         }
 
         if (!send_data) {

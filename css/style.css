@@ -934,10 +934,15 @@ header a:hover {
 }
 
 .news li>a {
-    flex-basis: 100px;
+    flex-basis: 80px;
     position: relative;
     align-self: flex-end;
     color: #525252;
+    opacity: .5;
+}
+
+.news li>a img {
+    width: 20px;
 }
 
 .news li>a:hover {
@@ -1427,7 +1432,7 @@ header a:hover {
 
     .product-sel button {
         width: 20%;
-        padding: 2vw 0px;
+        padding: 5px 0px;
         font-size: 14px;
     }
 
@@ -1874,7 +1879,7 @@ header a:hover {
 }
 
 .reservation #store {
-    color:black;
+    color: black;
     width: 250px;
     text-align: center;
     margin-top: 40px;
@@ -1893,18 +1898,21 @@ header a:hover {
     gap: 10px;
     margin-bottom: 20px;
 }
-.reservation .guest button{
+
+.reservation .guest button {
     background-color: transparent;
     border: none;
     font-size: 24px;
     width: 30px;
-    color:black;
+    color: black;
     margin: 0;
 }
-.reservation .guest button.disable{
-    color:rgba(0, 0, 0, 0.2)
+
+.reservation .guest button.disable {
+    color: rgba(0, 0, 0, 0.2)
 }
-.reservation .guest .minus{
+
+.reservation .guest .minus {
     font-size: 30px;
 }
 
@@ -1914,32 +1922,43 @@ header a:hover {
     display: flex;
     align-items: center;
 }
-.reservation button{
+
+.reservation button {
     border: 2px solid black;
     line-height: 30px;
     width: 200px;
     margin: 10px 0 30px;
 }
-.reservation button.next{
-    background-color:black;
+
+.reservation button.next {
+    background-color: black;
     color: white;
 }
-.reservation button.prev{
-    background-color:white;
+
+.reservation button.prev {
+    background-color: white;
     color: black;
 }
 
-.reservation .information{
+.reservation .information {
     margin: 100px auto;
     text-align: left;
     width: 400px;
 }
-.reservation .information h3{
+
+.reservation .information h3 {
     margin: 40px;
     display: block;
 }
-.reservation .information p{
+
+.reservation .information p {
     display: inline;
+}
+
+.reservation .progress3 h1 {
+    margin: 150px 0;
+    font-size: 30px;
+    font-family: 'Noto Sans TC', sans-serif;
 }
 
 @media screen and (max-width:428px) {
@@ -1973,15 +1992,19 @@ header a:hover {
         left: 15vw;
 
     }
-    .reservation .information{
+
+    .reservation .information {
         width: 100vw;
     }
 
-    .reservation .information h3{
+    .reservation .information h3 {
         margin: 20px;
         display: block;
     }
 
+    .reservation .progress3 h1 {
+        font-size: 5vw;
+    }
 
     .reservation-progress li.active:before {
         background-color: black;
@@ -2130,6 +2153,15 @@ header a:hover {
 
 }
 
+.faq form button {
+    width: 200px;
+    margin-top: 20px;
+    line-height: 30px;
+    border: none;
+    background-color: black;
+    color: white;
+}
+
 @media screen and (max-width:428px) {
     .faq>.faq-bg {
         width: 100vw;
@@ -2243,6 +2275,13 @@ header a:hover {
         overflow: hidden;
         padding: 0 10px;
 
+    }
+
+    .faq form button {
+        
+        margin-top: 0px;
+        margin-bottom: 10px;
+        
     }
 
 
