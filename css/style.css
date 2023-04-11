@@ -1910,7 +1910,7 @@ header a:hover {
 
 .reservation .guest-choose {
     justify-content: space-between;
-    width: 130px;
+    width: 150px;
     display: flex;
     align-items: center;
 }
@@ -1972,6 +1972,10 @@ header a:hover {
         top: -7.5vw;
         left: 15vw;
 
+    }
+    .reservation .information h3{
+        margin: 20px;
+        display: block;
     }
 
 
