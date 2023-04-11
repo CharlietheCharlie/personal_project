@@ -1891,6 +1891,7 @@ header a:hover {
     border-radius: 2px;
     font-weight: 500;
     font-family: 'Noto Sans TC', sans-serif;
+    cursor: pointer;
 }
 
 .reservation .guest {
@@ -1909,6 +1910,7 @@ header a:hover {
     width: 30px;
     color: black;
     margin: 0;
+    cursor: pointer;
 }
 
 .reservation .guest button.disable {
@@ -1931,6 +1933,7 @@ header a:hover {
     line-height: 30px;
     width: 200px;
     margin: 10px 0 30px;
+    cursor: pointer;
 }
 
 .reservation button.next {
@@ -2146,6 +2149,7 @@ header a:hover {
     background-color: rgba(0, 0, 0, );
     border-radius: 5px;
     transition: .2s;
+    cursor: pointer;
 }
 
 .qanda-close .question:hover {
@@ -2168,6 +2172,7 @@ header a:hover {
     border: none;
     background-color: black;
     color: white;
+    cursor: pointer;
 }
 .faq form button:hover {
     background-color: rgb(69, 69, 69);
@@ -2352,6 +2357,7 @@ header a:hover {
     border-radius: 10px 10px 0px 0px;
     border: none;
     color: black;
+    cursor: pointer;
 }
 
 .member>div>button.non-active {
@@ -2380,6 +2386,7 @@ header a:hover {
     background-color: #fff;
     font-size: 16px;
     font-family: 'Noto Sans TC', sans-serif;
+    cursor: pointer;
 }
 
 .member>div input:not([type=submit]) {
@@ -2398,6 +2405,7 @@ header a:hover {
     display: flex;
     align-items: center;
     flex-direction: column;
+    
 }
 
 .member>div #btn input {
@@ -2408,6 +2416,7 @@ header a:hover {
     background: rgba(52, 52, 52, 1);
     color: white;
     font-size: 20px;
+    cursor: pointer;
 }
 
 .member>div #btn a {
