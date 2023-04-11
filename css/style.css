@@ -890,13 +890,13 @@ header a:hover {
     align-items: center;
     padding: 10px 50px;
     box-sizing: border-box;
-    border-top: 1px solid #B4B4B4;
-}
-
-.news li:last-child {
-
     border-bottom: 1px solid #B4B4B4;
 }
+
+/* .news li:last-child {
+
+    border-bottom: 1px solid #B4B4B4;
+} */
 
 
 .news .date {
@@ -985,8 +985,8 @@ header a:hover {
         width: 100vw;
         height: 45vw;
         padding: 10px 5vw;
-        border-top: 1px solid #B4B4B4;
     }
+    
 
     .news .date {
         flex-basis: 20vw;
