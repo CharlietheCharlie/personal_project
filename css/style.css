@@ -792,7 +792,7 @@ header a:hover {
     .chat-res {
         width: 70vw;
         height: 40vw;
-        font-size: 15px;
+        font-size: 14px;
     }
 }
 
@@ -868,7 +868,7 @@ header a:hover {
     }
 
     .foot>p {
-        font-size: 14px;
+        font-size: 12px;
     }
 }
 
