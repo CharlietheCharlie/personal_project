@@ -385,7 +385,7 @@ signButtons.forEach(button => {
 let signUpPages = document.querySelectorAll(".member form.sign-up-form > div");
 let signUpPageButton = document.querySelectorAll(".member>div form>button");
 let pageClick = 0;
-let nextPage = "次頁"
+let nextPage = "下一步"
 signUpPageButton.forEach(button => {
     button.addEventListener("click", function (e) {
         pageClick += 1;
@@ -394,9 +394,9 @@ signUpPageButton.forEach(button => {
             page.classList.toggle("page-click");
             button.innerHTML = nextPage + "<br>" + ((pageClick) % signUpPages.length + 1) + " / 2";
             if ((pageClick) % signUpPages.length + 1 === 1) {
-                nextPage = "次頁"
+                nextPage = "下一步"
             } else {
-                nextPage = "前頁"
+                nextPage = "上一步"
             }
         })
 
