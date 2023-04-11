@@ -2169,6 +2169,9 @@ header a:hover {
     background-color: black;
     color: white;
 }
+.faq form button:hover {
+    background-color: rgb(69, 69, 69);
+}
 
 @media screen and (max-width:428px) {
     .faq>.faq-bg {

@@ -158,7 +158,7 @@ $(() => {
         // $(".chat-res").css({ display: "none" });
     })
     $(".sug").click((e) => {
-        
+
         $(".chat-res").css({ display: "none" });
     })
 
@@ -213,14 +213,14 @@ $(() => {
             if (parseInt($(".reservation .guest p").text()) > 1) {
                 $(".reservation .guest .plus").removeClass("disable");
                 $(".reservation .guest p").text(parseInt($(".reservation .guest p").text()) - 1 + " 位");
-                
+
                 if (parseInt($(".reservation .guest p").text()) === 1) {
                     console.log($(this))
                     $(this).addClass("disable")
                 }
             }
         })
-        
+
     }
     $(".reservation .progress1 button.next").click(function (e) {
         $(".reservation .progress1").css({ display: "none" });
@@ -245,12 +245,12 @@ $(() => {
         progress.find("li")[2].classList.add("active");
     })
 
-    $(".reservation .progress1 select").change(function(e){
+    $(".reservation .progress1 select").change(function (e) {
         $(".reservation .progress2 .store").text($(this).find("option:selected").text());
-        $(".reservation .progress2 .location").text( $(this).find("option:selected").attr("data-address"));
+        $(".reservation .progress2 .location").text($(this).find("option:selected").attr("data-address"));
     })
-    
-   
+
+
 
 });
 
@@ -329,11 +329,19 @@ faqPages.forEach(button => {
 
 });
 let faqSubmit = document.querySelectorAll(".faq form button[type=submit]");
-faqSubmit.forEach(submit=>{submit.addEventListener("click",(e)=>{
-    document.querySelector(".faq form textarea").value="";
-    e.preventDefault();
-    alert("謝謝，我們已收到您的來訊!")
-})
+faqSubmit.forEach(submit => {
+    submit.addEventListener("click", (e) => {
+        e.preventDefault();
+        if (document.querySelector(".faq form textarea").value !== "") {
+            document.querySelector(".faq form textarea").value = "";
+
+            alert("謝謝，我們已收到您的來訊!");
+
+        }else{
+            alert("您尚未輸入任何訊息");
+        }
+
+    })
 })
 
 // --------------------located 門市資訊地圖-----------------------------------------
@@ -449,7 +457,7 @@ signUpForm.forEach(form => {
         } else {
             email.classList.remove("-error");
         }
-        regex =  /[0-9]{8}$/;
+        regex = /[0-9]{8}$/;
         if (!regex.test(phone.value)) {
             phone.classList.add("-error");
             send_data = false;
