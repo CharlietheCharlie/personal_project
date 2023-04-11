@@ -1973,6 +1973,10 @@ header a:hover {
         left: 15vw;
 
     }
+    .reservation .information{
+        width: 100vw;
+    }
+
     .reservation .information h3{
         margin: 20px;
         display: block;
