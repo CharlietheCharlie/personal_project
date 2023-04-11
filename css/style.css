@@ -1956,9 +1956,14 @@ header a:hover {
 }
 
 .reservation .progress3 h1 {
-    margin: 150px 0;
-    font-size: 30px;
+    margin: 100px 0 10px;
+    font-size: 20px;
     font-family: 'Noto Sans TC', sans-serif;
+}
+
+.reservation .progress3 img {
+    margin-bottom: 150px;
+    width: 40px;
 }
 
 @media screen and (max-width:428px) {
