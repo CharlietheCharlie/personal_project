@@ -188,13 +188,13 @@ productTypes.forEach(type => {
 
 // -------------訂位 reservation 店點 人數---------------------------------------------
 $(() => {
-    $.get("../json/location.json", (res) => {
-        $.each(res, (index, item) => {
-            $(".reservation #store").append(`<option value=${item.name} data-address=${item.address}>${item.name}</option>`);
+    // $.get("../json/location.json", (res) => {
+    //     $.each(res, (index, item) => {
+    //         $(".reservation #store").append(`<option value=${item.name} data-address=${item.address}>${item.name}</option>`);
 
-        })
+    //     })
 
-    });
+    // });
     if (parseInt($(".reservation .guest p").text()) >= 1) {
         $(".reservation .guest .plus").click(function (e) {
             if (parseInt($(".reservation .guest p").text()) < 4) {

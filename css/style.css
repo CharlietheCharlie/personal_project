@@ -1874,6 +1874,7 @@ header a:hover {
 }
 
 .reservation #store {
+    color:black;
     width: 250px;
     text-align: center;
     margin-top: 40px;

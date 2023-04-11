@@ -1,7 +1,7 @@
 #calendar-wrapper {
     width: 500px;
     display: grid;
-    grid-template-rows: 2.5em 1fr; 
+    grid-template-rows: 2.5em 1fr;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     box-sizing: border-box;
@@ -9,13 +9,13 @@
     margin: 0 auto;
 }
 
-#calendar-wrapper > span {
+#calendar-wrapper>span {
     grid-row: 1/2;
     font-size: 24px;
     box-sizing: inherit;
 }
 
-#calendar-wrapper > span h4 {
+#calendar-wrapper>span h4 {
     padding: 0;
     margin: 30px 0 0em;
     font-weight: 700;
@@ -54,7 +54,7 @@
     width: 100%;
 }
 
-#calendar #calendar-grid > time {
+#calendar #calendar-grid>time {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -84,15 +84,15 @@
     border: 2px solid transparent;
     box-sizing: inherit;
     cursor: not-allowed;
-    color: rgb(103, 103, 103,.5);
+    color: rgb(103, 103, 103, .5);
     background-color: rgba(30, 39, 51, 0.1);
-    
+
 
 }
 
-#calendar #calendar-grid > *:hover {
+#calendar #calendar-grid>*:hover {
     border: 2px solid rgba(72, 72, 72, 0.5);
-    
+
     box-sizing: inherit;
 }
 
@@ -113,7 +113,7 @@
     background: transparent;
     border: 0;
     font-size: 3em;
-    width: 1.6em;    
+    width: 1.6em;
     box-sizing: inherit;
     padding: 0.1em;
     margin: 0;
@@ -142,46 +142,52 @@
     fill: rgba(30, 39, 51, 0.1);
 }
 
-@media screen and (max-width:428px){
+@media screen and (max-width:428px) {
 
     #calendar-wrapper {
-        width: 80%;
+        width: 85vw;
         margin: 0 auto;
     }
-    
-    #calendar-wrapper > span h4 {
+
+    #calendar-wrapper>span h4 {
         margin: 20px 0 0em;
     }
-    
+
     #calendar {
         margin: 2em 0 0px;
+        grid-template-columns: 1fr 2em;
     }
-    
-    
+
+
     #calendar #calendar-days {
 
         font-size: 16px;
     }
-    
-    
-    #calendar #navigation-wrapper {
-        padding: 0 0 3.5em;
+
+    #calendar #calendar-days,
+    #calendar #calendar-grid {
+        display: grid;
+        grid-template-columns: repeat(7,10vw);
 
     }
-    
-    #calendar #navigation-wrapper button {
+        #calendar #navigation-wrapper {
+            padding: 0 0 3.5em;
 
-        width: 1em;    
-      
+        }
+
+        #calendar #navigation-wrapper button {
+
+            width: 1em;
+
+        }
+
+        #calendar #navigation-wrapper button:hover {
+            opacity: 1;
+        }
+
+
+
+        #calendar #navigation-wrapper button:first-of-type {
+            transform: rotate(180deg);
+        }
     }
-    
-    #calendar #navigation-wrapper button:hover {
-        opacity: 1;
-    }
-    
-    
-    
-    #calendar #navigation-wrapper button:first-of-type {
-        transform: rotate(180deg);
-    }
-}
