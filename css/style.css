@@ -1218,12 +1218,12 @@ header a:hover {
     .located li {
 
         width: 100vw;
-        margin-bottom: 40vw;
+        margin-bottom: 45vw;
         height: 50vw;
     }
 
     .located li:last-child {
-        padding-bottom: 20vw;
+        padding-bottom: 120px;
     }
 
 
@@ -1270,8 +1270,8 @@ header a:hover {
 
     .located li .store-intro a>iframe {
         display: none;
-        width: 50vw;
-        height: 50vw;
+        width: 60vw;
+        height: 60vw;
         border-radius: 10px;
     }
 
