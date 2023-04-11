@@ -153,9 +153,12 @@ $(() => {
 
 
     })
-
-    $(".sug").click((e) => {
+    $(".chat-res").click((e) => {
         e.stopPropagation();
+        // $(".chat-res").css({ display: "none" });
+    })
+    $(".sug").click((e) => {
+        
         $(".chat-res").css({ display: "none" });
     })
 
