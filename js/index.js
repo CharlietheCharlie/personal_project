@@ -328,12 +328,12 @@ faqPages.forEach(button => {
     });
 
 });
-let faqSubmit = document.querySelector(".faq form button[type=submit]");
-faqSubmit.addEventListener("click",(e)=>{
+let faqSubmit = document.querySelectorAll(".faq form button[type=submit]");
+faqSubmit.forEach(submit=>{submit.addEventListener("click",(e)=>{
     document.querySelector(".faq form textarea").value="";
     e.preventDefault();
     alert("謝謝，我們已收到您的來訊!")
-    
+})
 })
 
 // --------------------located 門市資訊地圖-----------------------------------------
