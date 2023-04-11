@@ -1889,7 +1889,8 @@ header a:hover {
     flex-direction: column;
     width: 100%;
     align-items: center;
-    gap: 10px
+    gap: 10px;
+    margin-bottom: 20px;
 }
 .reservation .guest button{
     background-color: transparent;
@@ -1897,6 +1898,7 @@ header a:hover {
     font-size: 24px;
     width: 30px;
     color:black;
+    margin: 0;
 }
 .reservation .guest button.disable{
     color:rgba(0, 0, 0, 0.2)
@@ -1915,7 +1917,7 @@ header a:hover {
     border: 2px solid black;
     line-height: 30px;
     width: 200px;
-    margin: 30px 0;
+    margin: 10px 0 30px;
 }
 .reservation button.next{
     background-color:black;
@@ -1927,10 +1929,16 @@ header a:hover {
 }
 
 .reservation .information{
-    margin: 100px;
+    margin: 100px auto;
+    text-align: left;
+    width: 400px;
 }
 .reservation .information h3{
-    margin: 50px;
+    margin: 40px;
+    display: block;
+}
+.reservation .information p{
+    display: inline;
 }
 
 @media screen and (max-width:428px) {
