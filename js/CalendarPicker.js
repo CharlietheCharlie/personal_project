@@ -334,9 +334,11 @@ const myCalender = new CalendarPicker('#myCalendarWrapper', {
 
  
 const currentToDateString = document.getElementById('current-datestring');
-currentToDateString.textContent = myCalender.value.toDateString();
- 
+const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+
+currentToDateString.textContent = myCalender.value.toLocaleDateString(undefined, options);
+
 myCalender.onValueChange((currentValue) => {
-   currentToDateString.textContent = currentValue.toDateString();
+   currentToDateString.textContent = currentValue.toLocaleDateString(undefined, options);
 //    console.log(`The current value of the calendar is: ${currentValue}`);
 });
