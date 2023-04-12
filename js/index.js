@@ -262,7 +262,7 @@ reserveInfoInputs.forEach(input => {
             input.style.border = "none";
         }
         if (input.value === "") {
-            input.style.borderBottom = "1px solid black";
+            input.style.border = "2px solid black";
         }
 
     })
