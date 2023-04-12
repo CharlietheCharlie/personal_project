@@ -238,6 +238,7 @@ $(() => {
         progress.find("li")[0].classList.add("active");
     })
     $(".reservation .progress2 button.next").click(function (e) {
+        
         $(".reservation .progress3").css({ display: "block" });
         $(".reservation .progress2").css({ display: "none" });
         let progress = $(".reservation .reservation-progress");
@@ -253,6 +254,20 @@ $(() => {
 
 
 });
+let reserveInfoInputs = document.querySelectorAll(".reservation .information input");
+
+reserveInfoInputs.forEach(input => {
+    input.addEventListener("blur", function (e) {
+        if (input.value !== "") {
+            input.style.border = "none";
+        }
+        if (input.value === "") {
+            input.style.border = "2px solid black";
+        }
+
+    })
+
+})
 
 
 // ----------------品牌故事Story timeline 切換----------------------------------------
@@ -337,7 +352,7 @@ faqSubmit.forEach(submit => {
 
             alert("謝謝，我們已收到您的來訊!");
 
-        }else{
+        } else {
             alert("您尚未輸入任何訊息");
         }
 
